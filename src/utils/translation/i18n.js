@@ -11,7 +11,7 @@ const resources = {
       headerAbout: "A Propos",
       headerWorks: "Réalisations",
       headerContact: "Contact",
-      welcomeMessage: "Bienvenue à React et react-i18next",
+      welcomeMessage: "Bienvenue ",
     },
   },
   en: {
@@ -20,7 +20,7 @@ const resources = {
       headerAbout: "About Me",
       headerWorks: "My Work",
       headerContact: "Contact",
-      welcomeMessage: "Welcome to React and react-i18next",
+      welcomeMessage: "Welcome",
     },
   },
 };

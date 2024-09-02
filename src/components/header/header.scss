@@ -1,11 +1,77 @@
-$background-color: #FFFCF2;
-$text-color: #252422;
-$background-color-2: #FF5D73;
-$background-color-3: #6BBAEC;
-$background-color-4: #09BC8A;
-$input-color: #FFFFFF;
-$contact-error: #FF5D73;
+@use "../../styles/abstracts/colors.scss" as *;
 
-* {
-    color: $background-color-2;
+header {
+    margin: 30px 50px;
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+        height: fit-content;
+        svg {
+            transition: 200ms ease-in-out;
+        }
+        transition:200ms ease-in-out;
+    }
+
+    .header-left{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .header-center {
+        display: flex;
+        gap: 60px;
+    }
+
+    .header-right {
+        display: flex;
+        gap: 20px;
+        
+        a {
+            height: fit-content;
+        }
+        svg {
+            height: 20px;
+            width: 20px;
+        }
+    }
+    
+}
+
+.light header {
+    color: $text-color-light;
+    svg {
+        color: $text-color-light;
+    }
+
+    svg:hover {
+        color: $background-color-2-light;
+    }
+
+    a:hover {
+        color: $background-color-2-light;
+    }
+}
+
+.dark header {
+    color: $text-color-dark;
+
+    svg {
+        color: $text-color-dark;
+    }
+
+    svg:hover {
+        color: $background-color-2-dark;
+    }
+
+    a:hover {
+        color: $background-color-2-dark;
+    }
 }

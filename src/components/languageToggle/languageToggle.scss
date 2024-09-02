@@ -1,0 +1,42 @@
+.language-toggle {
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+    width: 20px;
+    overflow: hidden;
+    margin: 0;
+
+    .french-toggle {
+        position: relative;
+        height: 20px;
+        width: 20px;
+    }
+
+    .english-toggle{
+        position: relative;
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.language-toggle-false  {
+    .english-toggle {
+        transform: translateX(-80px);
+        transition: 500ms;
+    }
+    .french-toggle {
+        transform: translateX(-20px);
+        transition: 500ms;
+    }
+}
+
+.language-toggle-true  {
+    .english-toggle {
+        transform: translateX(0);
+        transition: 500ms;
+    }
+    .french-toggle {
+        transform: translateX(-100px);
+        transition: 500ms;
+    }
+}
