@@ -1,6 +1,5 @@
 import { Router } from "./Router";
-import { ThemeProvider } from "./utils/translation/context/theme";
-
+import { ThemeProvider } from "./utils/context/theme";
 import "./styles/styles.scss";
 import { useEffect, useState } from "react";
 
@@ -31,7 +30,7 @@ export function App() {
 
   return (
     <ThemeProvider value={{ themeMode, darkTheme, lightTheme }}>
-      <Router />;
+      <Router />
     </ThemeProvider>
   );
 }

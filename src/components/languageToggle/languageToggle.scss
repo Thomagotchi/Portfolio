@@ -1,3 +1,5 @@
+@use "../../styles/variables.scss" as *;
+
 .language-toggle {
     display: flex;
     flex-direction: row;
@@ -5,38 +7,54 @@
     width: 20px;
     overflow: hidden;
     margin: 0;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    font-weight: 700;
+    align-items: center;
 
-    .french-toggle {
-        position: relative;
-        height: 20px;
-        width: 20px;
-    }
-
-    .english-toggle{
-        position: relative;
-        height: 20px;
-        width: 20px;
+    &:hover {
+        cursor: pointer;
     }
 }
 
-.language-toggle-false  {
+.light .language-toggle .english-toggle:hover,
+.light .language-toggle .french-toggle:hover {
+    transition: 200ms;
+    color: $background-color-2-light;
+}
+
+.dark .language-toggle .english-toggle:hover,
+.dark .language-toggle .french-toggle:hover {
+    transition: 200ms;
+    color: $background-color-2-dark;
+}
+
+.language-toggle-false,
+.language-toggle-true {
+
+    .english-toggle,
+    .french-toggle {
+        transition: 500ms;
+    }
+}
+
+.language-toggle-false {
     .english-toggle {
         transform: translateX(-80px);
-        transition: 500ms;
     }
+
     .french-toggle {
         transform: translateX(-20px);
-        transition: 500ms;
     }
 }
 
-.language-toggle-true  {
+.language-toggle-true {
     .english-toggle {
         transform: translateX(0);
-        transition: 500ms;
     }
+
     .french-toggle {
         transform: translateX(-100px);
-        transition: 500ms;
     }
 }

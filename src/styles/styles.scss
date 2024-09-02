@@ -1,7 +1,8 @@
-@use "./abstracts/colors.scss" as *;
+@use "./variables.scss" as *;
 
 * {
     font-family: "Montserrat";
+    color: inherit;
 }
 
 body {

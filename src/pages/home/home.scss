@@ -1,0 +1,9 @@
+@use "../../styles/variables.scss" as *;
+
+.light .home {
+    color: $text-color-light;
+}
+
+.dark .home {
+    color: $text-color-dark;
+}

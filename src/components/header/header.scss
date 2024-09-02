@@ -1,4 +1,4 @@
-@use "../../styles/abstracts/colors.scss" as *;
+@use "../../styles/variables.scss" as *;
 
 header {
     margin: 30px 50px;
@@ -12,13 +12,15 @@ header {
 
     a {
         height: fit-content;
+
         svg {
             transition: 200ms ease-in-out;
         }
+
         transition:200ms ease-in-out;
     }
 
-    .header-left{
+    .header-left {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -33,20 +35,22 @@ header {
     .header-right {
         display: flex;
         gap: 20px;
-        
+
         a {
             height: fit-content;
         }
+
         svg {
             height: 20px;
             width: 20px;
         }
     }
-    
+
 }
 
 .light header {
     color: $text-color-light;
+
     svg {
         color: $text-color-light;
     }

@@ -1,27 +1,17 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import * as frTranslation from "../../assets/i18n/fr.json";
+import * as enTranslation from "../../assets/i18n/en.json";
 
 // the translations
 // (tip move them in a JSON file and import them,
 // or even better, manage them separated from your code: https://react.i18next.com/guides/multiple-translation-files)
 const resources = {
   fr: {
-    translation: {
-      logoAlt: "Logo du site.",
-      headerAbout: "A Propos",
-      headerWorks: "Réalisations",
-      headerContact: "Contact",
-      welcomeMessage: "Bienvenue ",
-    },
+    translation: frTranslation,
   },
   en: {
-    translation: {
-      logoAlt: "Logo of the website.",
-      headerAbout: "About Me",
-      headerWorks: "My Work",
-      headerContact: "Contact",
-      welcomeMessage: "Welcome",
-    },
+    translation: enTranslation,
   },
 };
 
