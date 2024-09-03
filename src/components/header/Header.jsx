@@ -1,13 +1,16 @@
-//--- Import de fonction React ---
+//--- Import de fonctions ---
 import { NavLink, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import "./header.scss";
-import "../../styles/styles.scss";
 import { useTranslation } from "react-i18next";
 import { LanguageToggle } from "../languageToggle/LanguageToggle";
 import { ThemeButton } from "../themeButton/ThemeButton";
+//--- Import de styles ---
+import "./header.scss";
+import "../../styles/styles.scss";
+//--- Import de données ---
+import * as informationsContact from "../../assets/data/informations.json";
 
 export function Header() {
   const { t } = useTranslation();
@@ -37,17 +40,14 @@ export function Header() {
         <NavLink to="Contact">{t("headerContact")}</NavLink>
       </nav>
       <div className="header-right">
-        <Link target="_blank" to="mailto:thomassanouiller.contact@gmail.com">
+        <Link target="_blank" to={`mailto:${informationsContact.email}`}>
           <FontAwesomeIcon icon={faEnvelope} alt="hello" />
         </Link>
-        <Link target="_blank" to="https://github.com/Thomagotchi">
-          <FontAwesomeIcon icon={faGithub} />
+        <Link target="_blank" to={informationsContact.githubUrl}>
+          <FontAwesomeIcon icon={faGithub} alt="hoi" />
         </Link>
-        <Link
-          target="_blank"
-          to="https://www.linkedin.com/in/thomas-sanouiller-0b0187315/"
-        >
-          <FontAwesomeIcon icon={faLinkedin} />
+        <Link target="_blank" to={informationsContact.linkedInUrl}>
+          <FontAwesomeIcon icon={faLinkedin} alt="" />
         </Link>
       </div>
     </header>

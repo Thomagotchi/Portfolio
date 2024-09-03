@@ -1,7 +1,7 @@
 {
-    "logoAlt": "Logo du site.",
-    "headerAbout": "A Propos",
-    "headerWorks": "Réalisations",
-    "headerContact": "Contact",
-    "welcomeMessage": "Bienvenue "
-  }
+  "logoAlt": "Logo du site.",
+  "headerAbout": "A Propos",
+  "headerWorks": "Réalisations",
+  "headerContact": "Contact",
+  "homeMessage": "Avec une passion pour le développement web et le design, je m'attache à concevoir et réaliser des solutions logiques, innovantes et esthétiques."
+}
