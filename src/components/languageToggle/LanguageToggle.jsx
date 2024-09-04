@@ -2,18 +2,11 @@ import { useState } from "react";
 import "./languageToggle.scss";
 import i18next from "i18next";
 
-if (localStorage.getItem("currentLanguage") === true) {
-  i18next.changeLanguage("en", (err) => {
-    if (err) return console.log("something went wrong loading", err);
-  });
-}
-
 export function LanguageToggle() {
   const activeLanguage = localStorage.getItem("currentLanguage");
-
   const [currentLanguage, setCurrentLanguage] = useState(activeLanguage);
 
-  //--- Toggle de l'état ---
+  //--- Toggle de la language ---
   function languageSwitch() {
     switch (currentLanguage) {
       case "fr":

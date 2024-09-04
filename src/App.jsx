@@ -14,12 +14,10 @@ export function App() {
     case "en":
       i18next.changeLanguage("en", (err) => {
         if (err) return console.log("something went wrong loading", err);
-        console.log("en");
       });
       break;
     default:
       localStorage.setItem("currentLanguage", "fr");
-      console.log("fr");
   }
 
   const [themeMode, setThemeMode] = useState(
