@@ -1,4 +1,4 @@
-import useTheme from "../../utils/context/theme";
+import useTheme from "../../../utils/context/theme";
 import "./themeButton.scss";
 
 export function ThemeButton() {

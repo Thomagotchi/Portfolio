@@ -1,0 +1,86 @@
+@use "../../styles/variables.scss" as *;
+
+.about-page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 123px auto 0 auto;
+    max-width: 952px;
+    gap: 80px;
+
+    .about-text-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 80px;
+
+            .about-description {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 32px;
+                max-width: 760px;
+            }
+
+            .quote-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                max-width: 380px;
+                margin-left: auto;
+
+                .quote-text {
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    line-height: 185%;
+                    font-weight: 400;
+                    font-size: 16px;
+                    font-style: italic;
+                    text-align: center;
+
+                    .quote-first-line, .quote-second-line {
+                        display: flex;
+                        margin: 0 auto;
+                    }
+
+                    .quote-first-line {
+                        gap: 4px;
+                    }
+
+                    .left-quote, .right-quote {
+                        font-style: italic;
+                        font-weight: 700;
+                        font-size: 24px;
+                        height: fit-content;
+                    }
+                }
+
+                .quote-author {
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 185%;
+                }
+            }
+    }
+
+    .stack-container {
+        width: 100%;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 800;
+    }
+
+    .buttons-container {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
+}
+
+.light .left-quote, .light .right-quote {
+    color: $background-color-2-light;
+}
+
+.dark .left-quote, .dark .right-quote {
+    color: $background-color-2-dark;
+}

@@ -10,6 +10,10 @@ header {
     align-items: center;
     justify-content: space-between;
 
+    .active {
+        font-weight: 700;
+    }
+
     a {
         height: fit-content;
 

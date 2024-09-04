@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { useTranslation } from "react-i18next";
-import { LanguageToggle } from "../languageToggle/LanguageToggle";
-import { ThemeButton } from "../themeButton/ThemeButton";
+import { LanguageToggle } from "../buttons/languageToggle/LanguageToggle";
+import { ThemeButton } from "../buttons/themeButton/ThemeButton";
 //--- Import de styles ---
 import "./header.scss";
 import "../../styles/styles.scss";
@@ -41,13 +41,13 @@ export function Header() {
       </nav>
       <div className="header-right">
         <Link target="_blank" to={`mailto:${informationsContact.email}`}>
-          <FontAwesomeIcon icon={faEnvelope} alt="hello" />
+          <FontAwesomeIcon icon={faEnvelope} alt="Logo Envelope" />
         </Link>
         <Link target="_blank" to={informationsContact.githubUrl}>
-          <FontAwesomeIcon icon={faGithub} alt="hoi" />
+          <FontAwesomeIcon icon={faGithub} alt="Logo Github" />
         </Link>
         <Link target="_blank" to={informationsContact.linkedInUrl}>
-          <FontAwesomeIcon icon={faLinkedin} alt="" />
+          <FontAwesomeIcon icon={faLinkedin} alt="Logo LinkedIn" />
         </Link>
       </div>
     </header>

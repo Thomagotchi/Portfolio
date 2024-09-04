@@ -3,5 +3,10 @@
   "headerAbout": "A Propos",
   "headerWorks": "Réalisations",
   "headerContact": "Contact",
-  "homeMessage": "Avec une passion pour le développement web et le design, je m'attache à concevoir et réaliser des solutions logiques, innovantes et esthétiques."
+  "homeMessage": "Avec une passion pour le développement web et le design, je m'attache à concevoir et réaliser des solutions logiques, innovantes et esthétiques.",
+  "aboutParagraph": "Jeune développeur web français de 25 ans basée en Normandie, avec une préférence pour le frontend. Je me suis reconverti vers le développement web grâce à OpenClassrooms, où j'ai obtenu un diplôme de niveau 5 (bac +2) en développement informatique.",
+  "aboutQuote1": "La plus grande difficulté de l'éducation,",
+  "aboutQuote2": "c'est de transformer les idées en expérience.",
+  "aboutQuoteAuthor": "- Georges Santayana",
+  "aboutStackTitle": "MA STACK ACTUELLE"
 }
