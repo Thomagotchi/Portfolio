@@ -2,31 +2,40 @@ import { useState } from "react";
 import "./languageToggle.scss";
 import i18next from "i18next";
 
+if (localStorage.getItem("currentLanguage") === true) {
+  i18next.changeLanguage("en", (err) => {
+    if (err) return console.log("something went wrong loading", err);
+  });
+}
+
 export function LanguageToggle() {
-  //--- L'état du toggle (Français / Anglais) ---
-  const [active, setActive] = useState(localStorage.getItem("transActive"));
+  const activeLanguage = localStorage.getItem("currentLanguage");
+
+  const [currentLanguage, setCurrentLanguage] = useState(activeLanguage);
 
   //--- Toggle de l'état ---
-  function toggleActive() {
-    setActive(!active);
-
-    if (active) {
-      i18next.changeLanguage("fr", (err) => {
-        if (err) return console.log("something went wrong loading", err);
-        localStorage.setItem("transActive", !active);
-      });
-    } else {
-      i18next.changeLanguage("en", (err) => {
-        if (err) return console.log("something went wrong loading", err);
-        localStorage.setItem("transActive", !active);
-      });
+  function languageSwitch() {
+    switch (currentLanguage) {
+      case "fr":
+        setCurrentLanguage("en");
+        i18next.changeLanguage("en", (err) => {
+          if (err) return console.log("something went wrong loading", err);
+          localStorage.setItem("currentLanguage", "en");
+        });
+        break;
+      default:
+        setCurrentLanguage("fr");
+        i18next.changeLanguage("fr", (err) => {
+          if (err) return console.log("something went wrong loading", err);
+          localStorage.setItem("currentLanguage", "fr");
+        });
     }
   }
 
   return (
     <div
-      className={`language-toggle language-toggle-${active}`}
-      onClick={toggleActive}
+      className={`language-toggle language-toggle-${currentLanguage}`}
+      onClick={languageSwitch}
     >
       <p className="english-toggle">EN</p>
       <p className="french-toggle">FR</p>

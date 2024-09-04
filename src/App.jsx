@@ -2,12 +2,24 @@ import { Router } from "./Router";
 import { ThemeProvider } from "./utils/context/theme";
 import "./styles/styles.scss";
 import { useEffect, useState } from "react";
+import i18next from "i18next";
 
 export function App() {
   const localTheme = localStorage.getItem("theme");
 
-  if (!localStorage.getItem("transActive")) {
-    localStorage.setItem("transActive", false);
+  const activeLanguage = localStorage.getItem("currentLanguage");
+
+  // Switch language to current language if user has already modified the language
+  switch (activeLanguage) {
+    case "en":
+      i18next.changeLanguage("en", (err) => {
+        if (err) return console.log("something went wrong loading", err);
+        console.log("en");
+      });
+      break;
+    default:
+      localStorage.setItem("currentLanguage", "fr");
+      console.log("fr");
   }
 
   const [themeMode, setThemeMode] = useState(
