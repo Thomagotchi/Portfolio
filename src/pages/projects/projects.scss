@@ -1,0 +1,22 @@
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 830px;
+    margin: 0 auto;
+
+    .projects-year-container {
+        margin-left: auto;
+
+        .projects-year {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 185%;
+        }
+    }
+
+    .projects-gallery {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: auto auto;
+    }
+}
