@@ -6,14 +6,18 @@
 }
 
 body {
-    margin: 0;
+    align-items: center;
+    margin: 0 auto;
     padding: 0;
 }
 
 .content-container {
-    max-width: 1440px;
-    height: calc(100vh - 60px);
-    margin: 30px auto;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 auto;
+    background-color: rgba(255, 0, 0, 0);
+    overflow: hidden;
 }
 
 a {
@@ -35,4 +39,41 @@ p {
 
 .dark {
     color: $text-color-dark;
+}
+
+html::-webkit-scrollbar {
+    position: absolute;
+    right: 10;
+    top: 0;
+    width: 0.7vw;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 0, 0, 0);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-clip: padding-box;  
+}
+
+html:has(.light) {
+    &::-webkit-scrollbar-thumb {
+        background-color: $text-color-light;
+    }
+
+    &::-webkit-scrollbar-track {
+        overflow: overlay;
+        background-color: $background-color-light;
+    }
+}
+
+html:has(.dark) {
+    &::-webkit-scrollbar-thumb {
+        background-color: $text-color-dark;
+    }
+
+    &::-webkit-scrollbar-track {
+        overflow: overlay;
+        background-color: $background-color-dark;
+    }
 }

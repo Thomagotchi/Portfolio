@@ -1,6 +1,7 @@
 import * as allProjects from "../../assets/data/projects.json";
 import { Link } from "react-router-dom";
 import "./card.scss";
+import { useTranslation } from "react-i18next";
 
 function toggleModal(id) {
   const listing = allProjects.year2024.projects.find(
@@ -23,12 +24,15 @@ const CreateTag = ({ id, tags }) => {
 };
 
 const Card = ({ id, title, tags, cover }) => {
+  const { t } = useTranslation();
+
   return (
     <Link onClick={() => toggleModal(id)} className="project-card">
       <img src={cover} alt={`${title} cover image.`} />
       <div className="card-text">
         <p className="card-title">{title}</p>
         <CreateTag tags={tags} id={id} />
+        <p className="card-link">{t("projectCardMessage")}</p>
       </div>
     </Link>
   );

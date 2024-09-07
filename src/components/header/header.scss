@@ -1,12 +1,13 @@
 @use "../../styles/variables.scss" as *;
 
 header {
-    margin: 0 50px;
+    padding: 30px 50px 0 50px;
+    margin: 0 auto;
     font-weight: 500;
     font-size: 14px;
     display: flex;
     flex-direction: row;
-    max-width: 100%;
+    max-width: 1440px;
     align-items: center;
     justify-content: space-between;
 

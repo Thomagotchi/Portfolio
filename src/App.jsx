@@ -34,6 +34,8 @@ export function App() {
   };
 
   useEffect(() => {
+    document.getElementById("root").classList.remove("dark", "light");
+    document.getElementById("root").classList.add(themeMode);
     document.querySelector("html").classList.remove("dark", "light");
     document.querySelector("html").classList.add(themeMode);
   }, [themeMode]);

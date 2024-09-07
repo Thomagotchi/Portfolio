@@ -2,47 +2,88 @@
 
 .project-card {
     display: flex;
+    height: 295px;
     max-width: 400px;
-    overflow: hidden;
     flex-direction: column;
-    filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
+    
 
     img {
+        z-index: -1;
         width: 100%;
         max-height: 215px;
     }
 
     .card-text {
         display: flex;
+        position: absolute;
+        bottom: 0;
         flex-direction: column;
         width: calc(100% - 38px);
         height: 80px;
         padding: 0 19px;
-        justify-content: center;
         gap: 2px;
+        transition: 300ms ease-in-out;
+        overflow: hidden;
 
         .card-title {
+            margin-top: 16px;
             font-size: 14px;
             font-weight: 700;
             line-height: 185%;
         }
 
-        .card-tags {
+        .card-tags, .card-link {
             font-size: 12px;
+        }
+        .card-tags {
             font-weight: 500;
             margin: 0 11px;
+        }
+
+        .card-link {
+            position: relative;
+            width: fit-content;
+            bottom: 1px;
+            font-weight: 600;
+            margin: 2px 11px 17px 11px;
+            opacity: 0;
+            transition: 300ms ease-in-out;
+        }
+    }
+
+    &:hover {
+        .card-text {
+            height: 105px;
+
+            .card-link {
+                border-bottom: 1px solid;
+                bottom: 0;
+                opacity: 1;
+            }
         }
     }
 }
 
-.light .card-text {
-    color: $text-color-light;
-    background-color: $background-color-light;
-    box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.10);
+.light {
+    .project-card {
+        filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15));
+    }
+
+    .card-text {
+        color: $text-color-light;
+        background-color: $background-color-light;
+        box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.10);
+    }
 }
 
-.dark .card-text {
-    color: $text-color-dark;
-    background-color: $background-color-dark;
-    box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.40);
+.dark {
+    .project-card {
+        filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.45));
+    }
+
+    .card-text {
+        color: $text-color-dark;
+        background-color: $background-color-dark;
+        box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.40);
+    }
 }

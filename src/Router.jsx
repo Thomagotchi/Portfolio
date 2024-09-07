@@ -24,8 +24,8 @@ export function Router() {
           <Route path="*" element={<Navigate to="/404" />} />
           <Route path="/404" element={<Error />} />
         </Routes>
+        <Background />
       </div>
-      <Background />
     </BrowserRouter>
   );
 }
