@@ -5,15 +5,11 @@
       {
         "id": "11",
         "title": "Sophie Bluel",
-        "cover": "src/assets/images/sophie/cover/sophie.webp",
+        "cover": "src/assets/images/sophie/cover/cover.webp",
         "pictures": ["", "", ""],
         "tags": ["HTML", "CSS", "Javascript"],
         "githubUrl": "https://github.com/Thomagotchi/Sophie-Bluel",
         "description": {
-          "fr": "",
-          "en": ""
-        },
-        "descriptionList": {
           "fr": "",
           "en": ""
         }
@@ -21,7 +17,7 @@
       {
         "id": "12",
         "title": "Mon Vieux Grimoire",
-        "cover": "src/assets/images/monVieuxGrimoire/cover/mvg.webp",
+        "cover": "src/assets/images/monVieuxGrimoire/cover/cover.webp",
         "pictures": ["../assets/images/projects/Kasa/cover.png", "", ""],
         "tags": ["Node.JS", "Express", "MongoDB"],
         "githubUrl": "https://github.com/Thomagotchi/Mon-Vieux-Grimoire",
@@ -37,23 +33,25 @@
       {
         "id": "13",
         "title": "Kasa",
-        "cover": "src/assets/images/kasa/cover/kasa.webp",
-        "pictures": ["../assets/images/projects/Kasa/cover.png", "", ""],
+        "cover": "src/assets/images/kasa/cover/cover.webp",
+        "pictures": [
+          "src/assets/images/kasa/carousel/screen1.webp",
+          "src/assets/images/kasa/carousel/screen2.webp",
+          "src/assets/images/kasa/carousel/screen3.webp",
+          "src/assets/images/kasa/carousel/screen4.webp",
+          "src/assets/images/kasa/carousel/screen5.webp"
+        ],
         "tags": ["React", "SASS"],
         "githubUrl": "https://github.com/Thomagotchi/Kasa-v2",
         "description": {
-          "fr": "",
-          "en": ""
-        },
-        "descriptionList": {
-          "fr": "",
-          "en": ""
+          "fr": "sdfsdfsfsf",
+          "en": "sdfsfsdf"
         }
       },
       {
         "id": "14",
         "title": "Booki",
-        "cover": "src/assets/images/booki/cover/booki.webp",
+        "cover": "src/assets/images/booki/cover/cover.webp",
         "pictures": ["../../assets/images/booki/cover/booki.webp", "", ""],
         "tags": ["HTML", "CSS"],
         "githubUrl": "",
@@ -69,7 +67,7 @@
       {
         "id": "15",
         "title": "Nina Carducci",
-        "cover": "src/assets/images/booki/cover/booki.webp",
+        "cover": "src/assets/images/ninaCarducci/cover/cover.webp",
         "pictures": ["", "", ""],
         "tags": ["HTML", "SEO", "Javascript"],
         "githubUrl": "https://github.com/Thomagotchi/Nina-Carducci",
@@ -85,7 +83,7 @@
       {
         "id": "16",
         "title": "Portfolio",
-        "cover": "src/assets/images/portfolio/cover/portfolio.webp",
+        "cover": "src/assets/images/portfolio/cover/cover.webp",
         "pictures": ["", "", ""],
         "tags": ["HTML", "SEO", "Javascript"],
         "githubUrl": "https://github.com/Thomagotchi/Portfolio",

@@ -32,7 +32,7 @@
                 opacity: 0;
                 animation-name: reveal1;
                 animation-duration: 1s;
-                animation-delay: 0.5s;
+                animation-delay: 0.6s;
                 animation-fill-mode: forwards;
             }
 
@@ -48,7 +48,7 @@
                 opacity: 0;
                 animation-name: reveal2;
                 animation-duration: 1s;
-                animation-delay: 1s;
+                animation-delay: 0.8s;
                 animation-fill-mode: forwards;
             }
         }
@@ -63,7 +63,7 @@
     right: 39%;
     opacity: 0;
     animation-name: unfold1;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-delay: 0.1s;
     animation-fill-mode: forwards;
 }
@@ -76,7 +76,7 @@
     left: 39%;
     opacity: 0;
     animation-name: unfold2;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-delay: 0.1s;
     animation-fill-mode: forwards;
 }

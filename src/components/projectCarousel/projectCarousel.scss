@@ -1,0 +1,82 @@
+//--- SASS Pour le composant Carousel ---
+.carousel-container {
+    position: relative;
+    display: flex;
+    max-width: 720px;
+    width: 100%;
+    height: 100vh;
+    max-height: 357px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+//--- Propriétés pour l'image du Carousel (taille + display none + transition) ---
+    .carousel-image {
+        display: none;
+        width: 100%;
+        position: absolute;
+        object-fit: cover;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+//--- Propriétés pour l'image précédente du Carousel (display flex + TranslateX -100%) ---
+    .carousel-image.prev{
+        display: flex;
+        transform: translateX(-100%);
+    }
+
+//--- Propriétés pour l'image actuelle du Carousel (display flex + TranslateX 0) ---
+    .carousel-image.active{
+        display: flex;
+        transform: translateX(0);
+    }
+
+//--- Propriétés pour l'image suivante du Carousel (display flex + TranslateX 100) ---
+    .carousel-image.next{
+        display: flex;
+        transform: translateX(100%);
+    }
+
+    .carousel-elements {
+        height: 100%;
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+        z-index: 1;
+
+        .carousel-arrow {
+            color: rgba(37, 36, 34, 1);
+            margin: auto 15px;
+            height: 20px;
+            transition: 0.3s ease-in-out;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .carousel-counter {
+            font-size: 1rem;
+            font-weight: 500;
+            color: white;
+            margin: auto auto 2% auto;
+        }
+    }
+}
+
+//--- Responsive Pour le composant Carousel ---
+@media (max-width: 1048px) {
+    .carousel-container {
+        .carousel-elements {
+            .carousel-counter {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 678px) {
+    .carousel-container {
+        height: 255px;
+    }
+}

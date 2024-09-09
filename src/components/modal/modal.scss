@@ -1,0 +1,28 @@
+@use "../../styles/variables.scss" as *;
+
+.modal-container {
+    position: absolute;
+    z-index: 3;
+    top: 10vh;
+    left: 20vw;
+    width: 720px;
+    height: 657px;
+}
+
+.modal-overlay {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.60);
+    z-index: 2;
+}
+
+.light .modal-container {
+    background-color: $background-color-light;
+}
+
+.dark .modal-container {
+    background-color: $background-color-dark;
+}

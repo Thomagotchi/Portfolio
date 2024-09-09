@@ -60,11 +60,7 @@ header {
         color: $text-color-light;
     }
 
-    svg:hover {
-        color: $background-color-2-light;
-    }
-
-    a:hover {
+    svg:hover, a:hover {
         color: $background-color-2-light;
     }
 }
@@ -76,11 +72,7 @@ header {
         color: $text-color-dark;
     }
 
-    svg:hover {
-        color: $background-color-2-dark;
-    }
-
-    a:hover {
+    svg:hover, a:hover {
         color: $background-color-2-dark;
     }
 }
