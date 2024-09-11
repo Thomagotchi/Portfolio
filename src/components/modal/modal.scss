@@ -20,8 +20,24 @@ body:has(.modal-container) {
         width: 800px;
         height: 657px;
         z-index: 3;
+        box-shadow: 0px 4px 22.1px 0px rgba(0, 0, 0, 0.50);
+
+        .modal-close-button {
+            width: 14px;
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            right: 0;
+            margin: 7px;
+            color: $text-color-light;
+            transition: 0.2s ease-in-out;
+            &:hover {
+                cursor: pointer;
+            }
+        }
 
         .carousel-caption {
+            box-shadow: 0px 4px 22.1px 0px rgba(0, 0, 0, 0.50);
             justify-content: center;
             position: absolute;
             bottom: 0;
@@ -38,7 +54,7 @@ body:has(.modal-container) {
                 .modal-title {
                     margin: 0;
                     font-size: 24px;
-                    font-weight: 800;
+                    font-weight: 700;
                 }
 
                 .modal-tags-container {
@@ -134,6 +150,10 @@ body:has(.modal-container) {
 .light .modal-container {
     background-color: $background-color-light;
 
+    svg:hover { 
+        color: $background-color-2-light;
+    }
+
     .modal-tags-container {
         li {
             color: $background-color-light;
@@ -156,6 +176,10 @@ body:has(.modal-container) {
 
 .dark .modal-container {
     background-color: $background-color-dark;
+
+    svg:hover { 
+        color: $background-color-2-dark;
+    }
 
     .modal-tags-container {
         li {

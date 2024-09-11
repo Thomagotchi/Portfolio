@@ -2,6 +2,8 @@ import ProjectCarousel from "../projectCarousel/ProjectCarousel";
 import { useTranslation } from "react-i18next";
 import "./modal.scss";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faX } from "@fortawesome/free-solid-svg-icons";
 
 const CreateTagModal = ({ tag }) => {
   return <li className="modal-tag">{tag}</li>;
@@ -18,12 +20,18 @@ const CheckDescriptionLanguage = ({ description }) => {
   }
 };
 
-export function Modal({ project }) {
+export function Modal({ closeFunction, project }) {
   const { t } = useTranslation();
 
   return (
     <>
       <div className="modal-container">
+        <FontAwesomeIcon
+          icon={faX}
+          className="modal-close-button"
+          alt={t("closeButtonAlt")}
+          onClick={closeFunction}
+        />
         <ProjectCarousel project={project} />
         <div className="carousel-caption">
           <div className="carousel-heading">

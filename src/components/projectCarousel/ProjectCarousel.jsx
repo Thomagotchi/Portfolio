@@ -1,8 +1,12 @@
 //--- Import de fonction React ---
-import { useState } from "react";
-import leftArrow from "../../assets/arrows/leftArrow.svg";
-import rightArrow from "../../assets/arrows/rightArrow.svg";
+import { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 import "./projectCarousel.scss";
+
 //--- Fonction qui retourne le composant Carousel  ---
 const ProjectCarousel = ({ project }) => {
   // Index pour l'image précédente
@@ -64,6 +68,19 @@ const ProjectCarousel = ({ project }) => {
       : setNextImageIndex(nextImageIndex + 1);
   };
 
+  const jumpImage = (index) => {
+    console.log(index);
+    setImageIndex(index);
+
+    imageIndex === 0
+      ? setPrevImageIndex(project.pictures.length - 1)
+      : setPrevImageIndex(index - 1);
+
+    imageIndex === project.pictures.length - 1
+      ? setNextImageIndex(0)
+      : setNextImageIndex(nextImageIndex + 1);
+  };
+
   // Retour des elements HTML
   return (
     <div className="carousel-container">
@@ -87,19 +104,27 @@ const ProjectCarousel = ({ project }) => {
       {project.pictures.length > 1 && (
         <div className="carousel-elements">
           {/* Flèche gauche */}
-          <img
-            src={leftArrow}
+          <FontAwesomeIcon
+            icon={faChevronLeft}
             alt="Left arrow."
             onClick={PreviousImage}
             className="carousel-arrow"
           />
           {/* Compteur */}
           <div className="carousel-counter">
-            {imageIndex + 1}/{project.pictures.length}
+            {project.pictures.map((picture) => (
+              <div
+                key={`counter-${project.pictures.indexOf(picture)}`}
+                className={`counter-circle counter-${project.pictures.indexOf(
+                  picture
+                )}`}
+                onClick={() => jumpImage(project.pictures.indexOf(picture))}
+              ></div>
+            ))}
           </div>
           {/* Flèche droite */}
-          <img
-            src={rightArrow}
+          <FontAwesomeIcon
+            icon={faChevronRight}
             alt="Right arrow."
             onClick={NextImage}
             className="carousel-arrow"

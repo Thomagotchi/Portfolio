@@ -34,6 +34,7 @@ export function Card({ id, title, tags, cover }) {
       {openModal && (
         <div className="modal">
           <Modal
+            closeFunction={toggleModal}
             project={allProjects.year2024.projects.find(
               (project) => project.id === id
             )}
