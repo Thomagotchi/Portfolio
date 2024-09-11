@@ -9,5 +9,7 @@
   "aboutQuote2": "is to get experience out of ideas.",
   "aboutQuoteAuthor": "- Georges Santayana",
   "aboutStackTitle": "MY CURRENT STACK",
-  "projectCardMessage": "Learn more"
+  "projectCardMessage": "Learn more",
+  "modalPreviousButton": "previous project",
+  "modalNextButton": "next project"
 }

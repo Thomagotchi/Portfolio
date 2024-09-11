@@ -9,5 +9,7 @@
   "aboutQuote2": "c'est de transformer les idées en expérience.",
   "aboutQuoteAuthor": "- Georges Santayana",
   "aboutStackTitle": "MA STACK ACTUELLE",
-  "projectCardMessage": "En savoir plus"
+  "projectCardMessage": "En savoir plus",
+  "modalPreviousButton": "projet précédant",
+  "modalNextButton": "projet suivant"
 }

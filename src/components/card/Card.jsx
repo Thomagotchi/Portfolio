@@ -12,15 +12,12 @@ const CreateTag = ({ tags }) => {
 export function Card({ id, title, tags, cover }) {
   const { t } = useTranslation();
   const [openModal, setOpenModal] = useState(false);
-  // const { t } = useTranslation();
 
   function toggleModal() {
-    if (localStorage.getItem`${title}-modal-open` === "true") {
+    if (openModal === true) {
       setOpenModal(false);
-      localStorage.setItem(`${title}-modal-open`, openModal);
     } else {
       setOpenModal(true);
-      localStorage.setItem(`${title}-modal-open`, openModal);
     }
   }
 
@@ -35,12 +32,15 @@ export function Card({ id, title, tags, cover }) {
         </div>
       </Link>
       {openModal && (
-        <Modal
-          project={allProjects.year2024.projects.find(
-            (project) => project.id === id
-          )}
-          key={`modal-${id}`}
-        />
+        <div className="modal">
+          <Modal
+            project={allProjects.year2024.projects.find(
+              (project) => project.id === id
+            )}
+            key={`modal-${id}`}
+          />
+          <div className="modal-overlay" onClick={toggleModal}></div>
+        </div>
       )}
     </>
   );

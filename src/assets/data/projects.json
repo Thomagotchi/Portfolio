@@ -7,11 +7,11 @@
         "title": "Sophie Bluel",
         "cover": "src/assets/images/sophie/cover/cover.webp",
         "pictures": ["", "", ""],
-        "tags": ["HTML", "CSS", "Javascript"],
+        "tags": ["HTML", "CSS", "Javascript", "Git"],
         "githubUrl": "https://github.com/Thomagotchi/Sophie-Bluel",
         "description": {
-          "fr": "",
-          "en": ""
+          "fr": "Ce projet avez pour but de créé une page web dynamique pour le site internet de l’architecte d’intérieur Sophie Bluel en utilisant seulement Javascript sans Framework tout en respectant les maquettes Figma. J’ai ainsi développer la parti Front-End du site à partir du HTML fourni en gérant les événements utilisateurs, communiquant avec une API et en manipulant les éléments du DOM. ",
+          "en": "This project aimed to create a dynamic web page for the interior designer Sophie Bluel's website using only JavaScript without any frameworks, while adhering to the Figma mockups. I developed the Front-End part of the site from the provided HTML, handling user events, communicating with an API, and manipulating DOM elements."
         }
       },
       {
@@ -44,8 +44,8 @@
         "tags": ["React", "SASS"],
         "githubUrl": "https://github.com/Thomagotchi/Kasa-v2",
         "description": {
-          "fr": "sdfsdfsfsf",
-          "en": "sdfsfsdf"
+          "fr": "Ce projet avez pour but de créé une page web dynamique pour le site internet de l’architecte d’intérieur Sophie Bluel en utilisant seulement Javascript sans Framework tout en respectant les maquettes Figma. J’ai ainsi développer la parti Front-End du site à partir du HTML fourni en gérant les événements utilisateurs, communiquant avec une API et en manipulant les éléments du DOM. ",
+          "en": "Ce projet avez pour but de créé une page web dynamique pour le site internet de l’architecte d’intérieur Sophie Bluel en utilisant seulement Javascript sans Framework tout en respectant les maquettes Figma. J’ai ainsi développer la parti Front-End du site à partir du HTML fourni en gérant les événements utilisateurs, communiquant avec une API et en manipulant les éléments du DOM. "
         }
       },
       {

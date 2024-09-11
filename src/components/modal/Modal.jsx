@@ -1,25 +1,25 @@
-// import { useTranslation } from "react-i18next";
 import ProjectCarousel from "../projectCarousel/ProjectCarousel";
+import { useTranslation } from "react-i18next";
 import "./modal.scss";
-import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const CreateTagModal = ({ tag }) => {
   return <li className="modal-tag">{tag}</li>;
 };
 
-export function Modal({ project }) {
-  // const { t } = useTranslation();
-  const [openModal, setOpenModal] = useState(false);
+const CheckDescriptionLanguage = ({ description }) => {
+  const currentLanguage = localStorage.getItem("currentLanguage");
 
-  function toggleModal() {
-    if (localStorage.getItem`${project.title}-modal-open` === "true") {
-      setOpenModal(false);
-      localStorage.setItem(`${project.title}-modal-open`, openModal);
-    } else {
-      setOpenModal(true);
-      localStorage.setItem(`${project.title}-modal-open`, openModal);
-    }
+  switch (currentLanguage) {
+    case "en":
+      return <div className="carousel-description">{description.en}</div>;
+    default:
+      return <div className="carousel-description">{description.fr}</div>;
   }
+};
+
+export function Modal({ project }) {
+  const { t } = useTranslation();
 
   return (
     <>
@@ -34,17 +34,20 @@ export function Modal({ project }) {
               ))}
             </ul>
           </div>
-          <div className="carousel-description">
-            {/* function which finds the active language and return the correct description */}
-          </div>
+          <CheckDescriptionLanguage description={project.description} />
           <div className="carousel-caption-buttons">
-            <p className="prev-project"></p>
-            {/* 2nd button component */}
-            <p className="next-project"></p>
+            <p className="prev-project">{t("modalPreviousButton")}</p>
+            <Link
+              className="secondary-button"
+              target="_blank"
+              to={project.githubUrl}
+            >
+              Github
+            </Link>
+            <p className="next-project">{t("modalNextButton")}</p>
           </div>
         </div>
       </div>
-      <div className="modal-overlay" onClick={toggleModal}></div>
     </>
   );
 }
