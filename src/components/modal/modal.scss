@@ -31,6 +31,7 @@ body:has(.modal-container) {
             margin: 7px;
             color: $text-color-light;
             transition: 0.2s ease-in-out;
+
             &:hover {
                 cursor: pointer;
             }
@@ -95,6 +96,7 @@ body:has(.modal-container) {
                 justify-content: space-between;
                 bottom: 20px;
                 display: flex;
+                transition: 0.3s ease-in-out;
 
                 .secondary-button,
                 .prev-project,
@@ -105,8 +107,6 @@ body:has(.modal-container) {
                         cursor: pointer;
                     }
                 }
-
-                transition: 0.3s ease-in-out;
 
                 .secondary-button {
                     position: absolute;
@@ -150,7 +150,7 @@ body:has(.modal-container) {
 .light .modal-container {
     background-color: $background-color-light;
 
-    svg:hover { 
+    svg:hover {
         color: $background-color-2-light;
     }
 
@@ -177,7 +177,7 @@ body:has(.modal-container) {
 .dark .modal-container {
     background-color: $background-color-dark;
 
-    svg:hover { 
+    svg:hover {
         color: $background-color-2-dark;
     }
 

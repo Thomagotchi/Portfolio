@@ -52,6 +52,7 @@
             height: 24px;
             color: $text-color-light;
             transition: 0.2s ease-in-out;
+            
             &:hover {
                 cursor: pointer;
             }
@@ -61,19 +62,22 @@
             position: absolute;
             display: flex;
             justify-content: center;
-            bottom: 20px;
+            bottom: -5px;
             z-index: 20;
-            margin: auto auto 2% auto;
             gap: 10px;
             height: 20px;
             width: 100%;
 
             .counter-circle {
-                top: 400px;
-                border-radius: 10px;
-                height: 14px;
-                width: 14px;
-                background-color: red;
+                bottom: 0;
+                border-radius: 4px;
+                height: 8px;
+                width: 8px;
+                transition: 0.3s ease-in-out;
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -81,6 +85,16 @@
 
 .light {
     .carousel-elements {
+        .carousel-counter {
+            .counter-circle {
+                background-color: $background-color-light;
+            }
+
+            .active {
+                background-color: $background-color-2-light;
+            }
+        }
+
         .carousel-arrow:hover {
             color: $background-color-2-light;
         }
@@ -89,6 +103,16 @@
 
 .dark {
     .carousel-elements {
+        .carousel-counter {
+            .counter-circle {
+                background-color: $background-color-dark;
+            }
+
+            .active {
+                background-color: $background-color-2-dark;
+            }
+        }
+
         .carousel-arrow:hover {
             color: $background-color-2-dark;
         }

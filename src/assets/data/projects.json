@@ -19,7 +19,7 @@
         "title": "Mon Vieux Grimoire",
         "cover": "src/assets/images/monVieuxGrimoire/cover/cover.webp",
         "pictures": ["../assets/images/projects/Kasa/cover.png", "", ""],
-        "tags": ["Node.JS", "Express", "MongoDB"],
+        "tags": ["Node.JS", "Express", "MongoDB", "Git"],
         "githubUrl": "https://github.com/Thomagotchi/Mon-Vieux-Grimoire",
         "description": {
           "fr": "",
@@ -41,7 +41,7 @@
           "src/assets/images/kasa/carousel/screen4.webp",
           "src/assets/images/kasa/carousel/screen5.webp"
         ],
-        "tags": ["React", "SASS"],
+        "tags": ["React", "SASS", "Git"],
         "githubUrl": "https://github.com/Thomagotchi/Kasa-v2",
         "description": {
           "fr": "Ce projet avez pour but de créé une page web dynamique pour le site internet de l’architecte d’intérieur Sophie Bluel en utilisant seulement Javascript sans Framework tout en respectant les maquettes Figma. J’ai ainsi développer la parti Front-End du site à partir du HTML fourni en gérant les événements utilisateurs, communiquant avec une API et en manipulant les éléments du DOM. ",
@@ -52,8 +52,12 @@
         "id": "14",
         "title": "Booki",
         "cover": "src/assets/images/booki/cover/cover.webp",
-        "pictures": ["../../assets/images/booki/cover/booki.webp", "", ""],
-        "tags": ["HTML", "CSS"],
+        "pictures": [
+          "src/assets/images/booki/cover/cover.webp",
+          "src/assets/images/kasa/cover/cover.webp",
+          "src/assets/images/ninaCarducci/cover/cover.webp"
+        ],
+        "tags": ["HTML", "CSS", "Git"],
         "githubUrl": "",
         "description": {
           "fr": "",
@@ -69,7 +73,7 @@
         "title": "Nina Carducci",
         "cover": "src/assets/images/ninaCarducci/cover/cover.webp",
         "pictures": ["", "", ""],
-        "tags": ["HTML", "SEO", "Javascript"],
+        "tags": ["HTML", "SEO", "Javascript", "Git"],
         "githubUrl": "https://github.com/Thomagotchi/Nina-Carducci",
         "description": {
           "fr": "",
@@ -85,7 +89,7 @@
         "title": "Portfolio",
         "cover": "src/assets/images/portfolio/cover/cover.webp",
         "pictures": ["", "", ""],
-        "tags": ["HTML", "SEO", "Javascript"],
+        "tags": ["HTML", "SEO", "Javascript", "Git"],
         "githubUrl": "https://github.com/Thomagotchi/Portfolio",
         "description": {
           "fr": "",

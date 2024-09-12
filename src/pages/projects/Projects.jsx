@@ -10,13 +10,7 @@ export function Projects() {
       </div>
       <div className="projects-gallery">
         {allProjects.year2024.projects.map((project) => (
-          <Card
-            key={`${project.title}-${project.id}`}
-            id={project.id}
-            title={project.title}
-            tags={project.tags}
-            cover={project.cover}
-          />
+          <Card key={`${project.title}-${project.id}`} project={project} />
         ))}
       </div>
     </div>

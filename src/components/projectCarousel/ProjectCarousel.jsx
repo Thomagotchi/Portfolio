@@ -1,5 +1,5 @@
 //--- Import de fonction React ---
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronLeft,
@@ -69,16 +69,15 @@ const ProjectCarousel = ({ project }) => {
   };
 
   const jumpImage = (index) => {
-    console.log(index);
     setImageIndex(index);
 
-    imageIndex === 0
+    index === 0
       ? setPrevImageIndex(project.pictures.length - 1)
       : setPrevImageIndex(index - 1);
 
-    imageIndex === project.pictures.length - 1
+    index === project.pictures.length - 1
       ? setNextImageIndex(0)
-      : setNextImageIndex(nextImageIndex + 1);
+      : setNextImageIndex(index + 1);
   };
 
   // Retour des elements HTML
@@ -115,8 +114,9 @@ const ProjectCarousel = ({ project }) => {
             {project.pictures.map((picture) => (
               <div
                 key={`counter-${project.pictures.indexOf(picture)}`}
-                className={`counter-circle counter-${project.pictures.indexOf(
-                  picture
+                className={`counter-circle ${checkCurrentImageIndex(
+                  project.pictures.indexOf(picture)
+                )}
                 )}`}
                 onClick={() => jumpImage(project.pictures.indexOf(picture))}
               ></div>
