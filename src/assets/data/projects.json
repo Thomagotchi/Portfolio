@@ -6,7 +6,14 @@
         "id": "11",
         "title": "Sophie Bluel",
         "cover": "src/assets/images/sophie/cover/cover.webp",
-        "pictures": ["", "", ""],
+        "pictures": [
+          "src/assets/images/sophie/carousel/screen1.png",
+          "src/assets/images/sophie/carousel/screen2.png",
+          "src/assets/images/sophie/carousel/screen3.png",
+          "src/assets/images/sophie/carousel/screen4.png",
+          "src/assets/images/sophie/carousel/screen5.png",
+          "src/assets/images/sophie/carousel/screen6.png"
+        ],
         "tags": ["HTML", "CSS", "Javascript", "Git"],
         "githubUrl": "https://github.com/Thomagotchi/Sophie-Bluel",
         "description": {
@@ -18,16 +25,20 @@
         "id": "12",
         "title": "Mon Vieux Grimoire",
         "cover": "src/assets/images/monVieuxGrimoire/cover/cover.webp",
-        "pictures": ["../assets/images/projects/Kasa/cover.png", "", ""],
+        "pictures": [
+          "src/assets/images/monVieuxGrimoire/carousel/screen1.png",
+          "src/assets/images/monVieuxGrimoire/carousel/screen2.png",
+          "src/assets/images/monVieuxGrimoire/carousel/screen3.png",
+          "src/assets/images/monVieuxGrimoire/carousel/screen4.png",
+          "src/assets/images/monVieuxGrimoire/carousel/screen5.png",
+          "src/assets/images/monVieuxGrimoire/carousel/screen6.png",
+          "src/assets/images/monVieuxGrimoire/carousel/screen7.png"
+        ],
         "tags": ["Node.JS", "Express", "MongoDB", "Git"],
         "githubUrl": "https://github.com/Thomagotchi/Mon-Vieux-Grimoire",
         "description": {
-          "fr": "",
-          "en": ""
-        },
-        "descriptionList": {
-          "fr": "",
-          "en": ""
+          "fr": "Mon role dans ce projet était de développer le back-end d'un site de notation de livres. La tache principale étant la création d'un serveur avec Express et la connecter à une base de données MongoDB. Cela impliquer l'implémentation des opérations CRUD et des modèles de données. Le stockage sécurisé et la création de middlewares était impératif à ce projet.",
+          "en": "My role in this project was to develop the back-end of a book rating website. The main task was to create a server using Express and connect it to a MongoDB database. This involved implementing CRUD operations and data models. Secure storage and the creation of middlewares were essential to this project."
         }
       },
       {
@@ -35,17 +46,16 @@
         "title": "Kasa",
         "cover": "src/assets/images/kasa/cover/cover.webp",
         "pictures": [
-          "src/assets/images/kasa/carousel/screen1.webp",
-          "src/assets/images/kasa/carousel/screen2.webp",
-          "src/assets/images/kasa/carousel/screen3.webp",
-          "src/assets/images/kasa/carousel/screen4.webp",
-          "src/assets/images/kasa/carousel/screen5.webp"
+          "src/assets/images/kasa/carousel/screen1.png",
+          "src/assets/images/kasa/carousel/screen2.png",
+          "src/assets/images/kasa/carousel/screen3.png",
+          "src/assets/images/kasa/carousel/screen4.png"
         ],
         "tags": ["React", "SASS", "Git"],
         "githubUrl": "https://github.com/Thomagotchi/Kasa-v2",
         "description": {
-          "fr": "Ce projet avez pour but de créé une page web dynamique pour le site internet de l’architecte d’intérieur Sophie Bluel en utilisant seulement Javascript sans Framework tout en respectant les maquettes Figma. J’ai ainsi développer la parti Front-End du site à partir du HTML fourni en gérant les événements utilisateurs, communiquant avec une API et en manipulant les éléments du DOM. ",
-          "en": "Ce projet avez pour but de créé une page web dynamique pour le site internet de l’architecte d’intérieur Sophie Bluel en utilisant seulement Javascript sans Framework tout en respectant les maquettes Figma. J’ai ainsi développer la parti Front-End du site à partir du HTML fourni en gérant les événements utilisateurs, communiquant avec une API et en manipulant les éléments du DOM. "
+          "fr": "Pour ce projet, j'ai implémenter le front-end d'une application en utilisant React, React Router et SASS pour créer une expérience utilisateur moderne et réactive. La mission était concentrer exclusivement sur la partie front-end, en se basant sur les maquettes Figma et en utilisant des données simulées extraites d'un fichier JSON.",
+          "en": "For this project, I implemented the front-end of an application using React, React Router, and SASS to create a modern and responsive user experience. The focus was exclusively on the front-end, based on Figma designs and using simulated data extracted from a JSON file."
         }
       },
       {
@@ -53,51 +63,56 @@
         "title": "Booki",
         "cover": "src/assets/images/booki/cover/cover.webp",
         "pictures": [
-          "src/assets/images/booki/cover/cover.webp",
-          "src/assets/images/kasa/cover/cover.webp",
-          "src/assets/images/ninaCarducci/cover/cover.webp"
+          "src/assets/images/booki/carousel/screen1.png",
+          "src/assets/images/booki/carousel/screen2.png",
+          "src/assets/images/booki/carousel/screen3.png",
+          "src/assets/images/booki/carousel/screen4.png",
+          "src/assets/images/booki/carousel/screen5.png"
         ],
         "tags": ["HTML", "CSS", "Git"],
-        "githubUrl": "",
+        "githubUrl": "https://github.com/Thomagotchi/Booki",
         "description": {
-          "fr": "",
-          "en": ""
-        },
-        "descriptionList": {
-          "fr": "",
-          "en": ""
+          "fr": "La mission principale de ce projet était l'intégration d'une interface responsive pour le site Booki, en suivant scrupuleusement la maquette Figma. Le projet a été réalisé exclusivement avec HTML et CSS, sans recourir à des framework type Tailwind CSS.",
+          "en": "The main objective of this project was to integrate a responsive interface for the Booki website, strictly following the Figma mockup. The project was carried out exclusively using HTML and CSS, without using any frameworks like Tailwind CSS."
         }
       },
       {
         "id": "15",
         "title": "Nina Carducci",
         "cover": "src/assets/images/ninaCarducci/cover/cover.webp",
-        "pictures": ["", "", ""],
+        "pictures": [
+          "src/assets/images/ninaCarducci/carousel/screen1.png",
+          "src/assets/images/ninaCarducci/carousel/screen2.png",
+          "src/assets/images/ninaCarducci/carousel/screen3.png",
+          "src/assets/images/ninaCarducci/carousel/screen4.png",
+          "src/assets/images/ninaCarducci/carousel/screen5.png",
+          "src/assets/images/ninaCarducci/carousel/screen6.png"
+        ],
         "tags": ["HTML", "SEO", "Javascript", "Git"],
         "githubUrl": "https://github.com/Thomagotchi/Nina-Carducci",
         "description": {
-          "fr": "",
-          "en": ""
-        },
-        "descriptionList": {
-          "fr": "",
-          "en": ""
+          "fr": "Pour ce projet, j'ai travaillez en tant que développeur freelance pour optimiser le référencement du site, en améliorant sa performance et son accessibilité. J'ai du identifier les problèmes de chargement et de référencement en utilisant des outils tels que Lighthouse et Wave pour évaluer les performances. J'ai en suite implémenter les améliorations et rédiger un rapport complet, illustrant les résultats avant et après les modifications.",
+          "en": "For this project, I worked as a freelance developer to optimize the site's SEO by improving its performance and accessibility. I had to identify loading and SEO issues using tools like Lighthouse and Wave to assess performance. I then implemented the improvements and drafted a comprehensive report, illustrating the results before and after the changes."
         }
       },
       {
         "id": "16",
         "title": "Portfolio",
         "cover": "src/assets/images/portfolio/cover/cover.webp",
-        "pictures": ["", "", ""],
-        "tags": ["HTML", "SEO", "Javascript", "Git"],
+        "pictures": [
+          "src/assets/images/portfolio/carousel/screen1.png",
+          "src/assets/images/portfolio/carousel/screen2.png",
+          "src/assets/images/portfolio/carousel/screen3.png",
+          "src/assets/images/portfolio/carousel/screen4.png",
+          "src/assets/images/portfolio/carousel/screen5.png",
+          "src/assets/images/portfolio/carousel/screen6.png",
+          "src/assets/images/portfolio/carousel/screen7.png"
+        ],
+        "tags": ["React", "SASS", "Git"],
         "githubUrl": "https://github.com/Thomagotchi/Portfolio",
         "description": {
-          "fr": "",
-          "en": ""
-        },
-        "descriptionList": {
-          "fr": "",
-          "en": ""
+          "fr": "Ce projet avez pour but de développer l'entièreté de mon propre portfolio en respectant les maquettes Figma que j'ai également créer. J'ai eu comme mission d'exposer mes compétences acquises et en mettant un point d'honneur sur le référencement, déploiement, débuggage et l'accessibilité du site.",
+          "en": "This project aimed to develop my personal portfolio while adhering to the Figma designs that I also created. My objective was to showcase the skills I had acquired, with a strong emphasis on SEO, deployment, debugging, and site accessibility."
         }
       }
     ]

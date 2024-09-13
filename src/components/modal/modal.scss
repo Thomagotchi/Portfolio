@@ -8,12 +8,12 @@ body:has(.modal-container) {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100dvw;
 
     .modal-container {
         position: absolute;
-        top: calc(50vh - 350px);
+        top: calc(50vh - 328.5px);
         left: calc(50vw - 400px);
         display: flex;
         flex-direction: column;
@@ -139,8 +139,8 @@ body:has(.modal-container) {
         top: 0;
         left: 0;
         right: 0;
-        bottom: 0;
-        height: 100vh;
+        bottom: 0; 
+        height: 100%;
         width: 100vw;
         background: rgba(0, 0, 0, 0.60);
         z-index: 2;
