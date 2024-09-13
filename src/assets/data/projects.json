@@ -5,14 +5,14 @@
       {
         "id": "11",
         "title": "Sophie Bluel",
-        "cover": "src/assets/images/sophie/cover/cover.webp",
+        "cover": "/images/sophie/cover/cover.webp",
         "pictures": [
-          "src/assets/images/sophie/carousel/screen1.png",
-          "src/assets/images/sophie/carousel/screen2.png",
-          "src/assets/images/sophie/carousel/screen3.png",
-          "src/assets/images/sophie/carousel/screen4.png",
-          "src/assets/images/sophie/carousel/screen5.png",
-          "src/assets/images/sophie/carousel/screen6.png"
+          "/images/sophie/carousel/screen1.png",
+          "/images/sophie/carousel/screen2.png",
+          "/images/sophie/carousel/screen3.png",
+          "/images/sophie/carousel/screen4.png",
+          "/images/sophie/carousel/screen5.png",
+          "/images/sophie/carousel/screen6.png"
         ],
         "tags": ["HTML", "CSS", "Javascript", "Git"],
         "githubUrl": "https://github.com/Thomagotchi/Sophie-Bluel",
@@ -24,15 +24,15 @@
       {
         "id": "12",
         "title": "Mon Vieux Grimoire",
-        "cover": "src/assets/images/monVieuxGrimoire/cover/cover.webp",
+        "cover": "/images/monVieuxGrimoire/cover/cover.webp",
         "pictures": [
-          "src/assets/images/monVieuxGrimoire/carousel/screen1.png",
-          "src/assets/images/monVieuxGrimoire/carousel/screen2.png",
-          "src/assets/images/monVieuxGrimoire/carousel/screen3.png",
-          "src/assets/images/monVieuxGrimoire/carousel/screen4.png",
-          "src/assets/images/monVieuxGrimoire/carousel/screen5.png",
-          "src/assets/images/monVieuxGrimoire/carousel/screen6.png",
-          "src/assets/images/monVieuxGrimoire/carousel/screen7.png"
+          "/images/monVieuxGrimoire/carousel/screen1.png",
+          "/images/monVieuxGrimoire/carousel/screen2.png",
+          "/images/monVieuxGrimoire/carousel/screen3.png",
+          "/images/monVieuxGrimoire/carousel/screen4.png",
+          "/images/monVieuxGrimoire/carousel/screen5.png",
+          "/images/monVieuxGrimoire/carousel/screen6.png",
+          "/images/monVieuxGrimoire/carousel/screen7.png"
         ],
         "tags": ["Node.JS", "Express", "MongoDB", "Git"],
         "githubUrl": "https://github.com/Thomagotchi/Mon-Vieux-Grimoire",
@@ -44,12 +44,12 @@
       {
         "id": "13",
         "title": "Kasa",
-        "cover": "src/assets/images/kasa/cover/cover.webp",
+        "cover": "/images/kasa/cover/cover.webp",
         "pictures": [
-          "src/assets/images/kasa/carousel/screen1.png",
-          "src/assets/images/kasa/carousel/screen2.png",
-          "src/assets/images/kasa/carousel/screen3.png",
-          "src/assets/images/kasa/carousel/screen4.png"
+          "/images/kasa/carousel/screen1.png",
+          "/images/kasa/carousel/screen2.png",
+          "/images/kasa/carousel/screen3.png",
+          "/images/kasa/carousel/screen4.png"
         ],
         "tags": ["React", "SASS", "Git"],
         "githubUrl": "https://github.com/Thomagotchi/Kasa-v2",
@@ -61,13 +61,13 @@
       {
         "id": "14",
         "title": "Booki",
-        "cover": "src/assets/images/booki/cover/cover.webp",
+        "cover": "/images/booki/cover/cover.webp",
         "pictures": [
-          "src/assets/images/booki/carousel/screen1.png",
-          "src/assets/images/booki/carousel/screen2.png",
-          "src/assets/images/booki/carousel/screen3.png",
-          "src/assets/images/booki/carousel/screen4.png",
-          "src/assets/images/booki/carousel/screen5.png"
+          "/images/booki/carousel/screen1.png",
+          "/images/booki/carousel/screen2.png",
+          "/images/booki/carousel/screen3.png",
+          "/images/booki/carousel/screen4.png",
+          "/images/booki/carousel/screen5.png"
         ],
         "tags": ["HTML", "CSS", "Git"],
         "githubUrl": "https://github.com/Thomagotchi/Booki",
@@ -79,14 +79,14 @@
       {
         "id": "15",
         "title": "Nina Carducci",
-        "cover": "src/assets/images/ninaCarducci/cover/cover.webp",
+        "cover": "/images/ninaCarducci/cover/cover.webp",
         "pictures": [
-          "src/assets/images/ninaCarducci/carousel/screen1.png",
-          "src/assets/images/ninaCarducci/carousel/screen2.png",
-          "src/assets/images/ninaCarducci/carousel/screen3.png",
-          "src/assets/images/ninaCarducci/carousel/screen4.png",
-          "src/assets/images/ninaCarducci/carousel/screen5.png",
-          "src/assets/images/ninaCarducci/carousel/screen6.png"
+          "/images/ninaCarducci/carousel/screen1.png",
+          "/images/ninaCarducci/carousel/screen2.png",
+          "/images/ninaCarducci/carousel/screen3.png",
+          "/images/ninaCarducci/carousel/screen4.png",
+          "/images/ninaCarducci/carousel/screen5.png",
+          "/images/ninaCarducci/carousel/screen6.png"
         ],
         "tags": ["HTML", "SEO", "Javascript", "Git"],
         "githubUrl": "https://github.com/Thomagotchi/Nina-Carducci",
@@ -98,15 +98,15 @@
       {
         "id": "16",
         "title": "Portfolio",
-        "cover": "src/assets/images/portfolio/cover/cover.webp",
+        "cover": "/images/portfolio/cover/cover.webp",
         "pictures": [
-          "src/assets/images/portfolio/carousel/screen1.png",
-          "src/assets/images/portfolio/carousel/screen2.png",
-          "src/assets/images/portfolio/carousel/screen3.png",
-          "src/assets/images/portfolio/carousel/screen4.png",
-          "src/assets/images/portfolio/carousel/screen5.png",
-          "src/assets/images/portfolio/carousel/screen6.png",
-          "src/assets/images/portfolio/carousel/screen7.png"
+          "/images/portfolio/carousel/screen1.png",
+          "/images/portfolio/carousel/screen2.png",
+          "/images/portfolio/carousel/screen3.png",
+          "/images/portfolio/carousel/screen4.png",
+          "/images/portfolio/carousel/screen5.png",
+          "/images/portfolio/carousel/screen6.png",
+          "/images/portfolio/carousel/screen7.png"
         ],
         "tags": ["React", "SASS", "Git"],
         "githubUrl": "https://github.com/Thomagotchi/Portfolio",
