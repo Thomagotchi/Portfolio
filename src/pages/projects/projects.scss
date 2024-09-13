@@ -6,11 +6,20 @@
 
     .projects-year-container {
         margin-left: auto;
+        gap: 25px;
 
         .projects-year {
+            margin-left: auto;
+            margin-bottom: 15px;
+            width: fit-content;
+            height: fit-content;
             font-size: 32px;
             font-weight: 700;
-            line-height: 185%;
+        }
+
+        .seperator-bar {
+            display: flex;
+            margin-bottom: 25px;
         }
     }
 
