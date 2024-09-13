@@ -17,12 +17,11 @@ header {
 
     a {
         height: fit-content;
-
+        transition:200ms ease-in-out;
+        
         svg {
             transition: 200ms ease-in-out;
         }
-
-        transition:200ms ease-in-out;
     }
 
     .header-left {

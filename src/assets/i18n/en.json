@@ -4,12 +4,13 @@
   "headerWorks": "My Work",
   "headerContact": "Contact",
   "homeMessage": "With a passion for web development and design, I strive to create and deliver logical, innovative, and aesthetic solutions.",
-  "aboutParagraph": "French web developer, 25 years old, based in Normandy, with a strong focus on frontend development. I made a career switch into web development through OpenClassrooms, where I earned a level 5 diploma in computer science.",
+  "aboutParagraph": "25 years old french web developer based in Normandy, with a strong focus on frontend development. I made a career switch into web development through OpenClassrooms, where I earned a level 5 diploma in computer science.",
   "aboutQuote1": "The great difficulty in education",
   "aboutQuote2": "is to get experience out of ideas.",
   "aboutQuoteAuthor": "- Georges Santayana",
   "aboutStackTitle": "MY CURRENT STACK",
   "projectCardMessage": "Learn more",
+  "closeButtonAlt": "Modal close button",
   "modalPreviousButton": "previous project",
   "modalNextButton": "next project"
 }

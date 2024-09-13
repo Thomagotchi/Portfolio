@@ -1,3 +1,5 @@
+@use "../../styles/variables.scss" as *;
+
 //--- SASS Pour le composant Carousel ---
 .carousel-container {
     position: relative;
@@ -46,33 +48,86 @@
         z-index: 1;
 
         .carousel-arrow {
-            color: rgba(37, 36, 34, 1);
-            margin: auto 15px;
+            margin: auto 8px;
             height: 24px;
-            transition: 0.3s ease-in-out;
+            color: $text-color-light;
+            transition: 0.2s ease-in-out;
+            
             &:hover {
                 cursor: pointer;
             }
         }
 
         .carousel-counter {
-            font-size: 1rem;
-            font-weight: 500;
-            color: white;
-            margin: auto auto 2% auto;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            bottom: -5px;
+            z-index: 20;
+            gap: 10px;
+            height: 20px;
+            width: 100%;
+
+            .counter-circle {
+                bottom: 0;
+                border-radius: 4px;
+                height: 8px;
+                width: 8px;
+                transition: 0.3s ease-in-out;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.light {
+    .carousel-elements {
+        .carousel-counter {
+            .counter-circle {
+                background-color: $background-color-light;
+            }
+
+            .active {
+                background-color: $background-color-2-light;
+            }
+        }
+
+        .carousel-arrow:hover {
+            color: $background-color-2-light;
+        }
+    }
+}
+
+.dark {
+    .carousel-elements {
+        .carousel-counter {
+            .counter-circle {
+                background-color: $background-color-dark;
+            }
+
+            .active {
+                background-color: $background-color-2-dark;
+            }
+        }
+
+        .carousel-arrow:hover {
+            color: $background-color-2-dark;
         }
     }
 }
 
 //--- Responsive Pour le composant Carousel ---
 @media (max-width: 1048px) {
-    .carousel-container {
-        .carousel-elements {
-            .carousel-counter {
-                display: none;
-            }
-        }
-    }
+    // .carousel-container {
+    //     .carousel-elements {
+    //         .carousel-counter {
+    //             display: none;
+    //         }
+    //     }
+    // }
 }
 
 @media (max-width: 678px) {
