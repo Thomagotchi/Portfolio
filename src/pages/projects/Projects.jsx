@@ -13,7 +13,7 @@ export function Projects() {
           viewBox="0 0 148 4"
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
-          className="seperator-bar"
+          className="separator-bar"
         >
           <rect
             width="4"
@@ -53,6 +53,7 @@ export function Projects() {
         </svg>
       </div>
       <div className="projects-gallery">
+        <div id="portal"></div>
         {allProjects.year2024.projects.map((project) => (
           <Card key={`${project.title}-${project.id}`} project={project} />
         ))}

@@ -34,14 +34,11 @@ export function Card({ project }) {
         </div>
       </Link>
       {openModal && (
-        <div className="modal">
-          <Modal
-            closeFunction={toggleModal}
-            currentIndex={currentProjectIndex}
-            key={`modal-${currentProjectIndex}`}
-          />
-          <div className="modal-overlay" onClick={toggleModal}></div>
-        </div>
+        <Modal
+          closeFunction={toggleModal}
+          currentIndex={currentProjectIndex}
+          key={`modal-${currentProjectIndex}`}
+        />
       )}
     </>
   );
