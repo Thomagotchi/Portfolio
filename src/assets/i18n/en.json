@@ -12,5 +12,11 @@
   "projectCardMessage": "Learn more",
   "closeButtonAlt": "Modal close button",
   "modalPreviousButton": "previous project",
-  "modalNextButton": "next project"
+  "modalNextButton": "next project",
+  "formNameLabel": "Name",
+  "formEmailLabel": "E-Mail",
+  "formObjectLabel": "Subject",
+  "formMessageLabel": "Message",
+  "formErrorMessage": "Please fill out all fields",
+  "formSuccessMessage": "Message sent"
 }

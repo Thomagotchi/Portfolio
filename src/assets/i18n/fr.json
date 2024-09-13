@@ -12,5 +12,11 @@
   "projectCardMessage": "En savoir plus",
   "closeButtonAlt": "Bouton pour fermer la modale",
   "modalPreviousButton": "projet précédant",
-  "modalNextButton": "projet suivant"
+  "modalNextButton": "projet suivant",
+  "formNameLabel": "Nom",
+  "formEmailLabel": "E-Mail",
+  "formObjectLabel": "Objet",
+  "formMessageLabel": "Message",
+  "formErrorMessage": "Veuillez remplir tous les champs",
+  "formSuccessMessage": "Message envoyé"
 }
