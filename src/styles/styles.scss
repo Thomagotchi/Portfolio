@@ -5,6 +5,12 @@
     color: inherit;
 }
 
+:root {
+    --toastify-toast-min-height: 60px!important;
+    --toastify-font-family: Montserrat;
+    --toastify-z-index: 9999;
+}
+
 body {
     align-items: center;
     margin: 0 auto;

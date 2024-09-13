@@ -1,49 +1,82 @@
 import "./contactForm.scss";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import emailjs from "@emailjs/browser";
-
-function sendMail(data) {
-  emailjs
-    .send(
-      import.meta.env.VITE_MAILER_SECRET,
-      import.meta.env.VITE_MAILER_TEMPLATE_SECRET,
-      {
-        name: data.name,
-        object: data.object,
-        message: data.message,
-        email: data.email,
-      },
-      {
-        publicKey: import.meta.env.VITE_MAILER_PUBLIC_KEY,
-      }
-    )
-    .then(
-      () => {
-        // Le mail a été envoyé
-        console.log("SUCCESS!");
-      },
-      (error) => {
-        // Le mail n'a pas été envoyé
-        console.log("FAILED...", error);
-      }
-    );
-}
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTriangleExclamation,
+  faCheck,
+} from "@fortawesome/free-solid-svg-icons";
+// import emailjs from "@emailjs/browser";
+import { ToastContainer, toast, Slide } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export function ContactForm() {
   const { t } = useTranslation();
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitted },
+    reset,
+    formState: { errors },
   } = useForm();
 
+  function onSubmit(data) {
+    notifySuccess();
+    sendMail(data);
+  }
+
+  function sendMail(data) {
+    console.log(data);
+    // emailjs
+    //   .send(
+    //     import.meta.env.VITE_MAILER_SECRET,
+    //     import.meta.env.VITE_MAILER_TEMPLATE_SECRET,
+    //     {
+    //       name: data.name,
+    //       object: data.object,
+    //       message: data.message,
+    //       email: data.email,
+    //     },
+    //     {
+    //       publicKey: import.meta.env.VITE_MAILER_PUBLIC_KEY,
+    //     }
+    //   )
+    //   .then(
+    //     () => {
+    //       // Le mail a été envoyé
+    //       console.log("SUCCESS!");
+    //     },
+    //     (error) => {
+    //       // Le mail n'a pas été envoyé
+    //       console.log("FAILED...", error);
+    //     }
+    //   );
+    reset();
+  }
+
+  const notifySuccess = () => {
+    // This removes all toasts from before
+    toast.dismiss();
+    toast.success(t("formSuccessMessage"), {
+      icon: () => <FontAwesomeIcon icon={faCheck} />,
+      position: "bottom-right",
+    });
+  };
+
+  const checkErrors = (errors) => {
+    if (errors.name || errors.email || errors.object || errors.message) {
+      // This removes all toasts from before
+      toast.dismiss();
+      toast.error(t("formErrorMessage"), {
+        icon: () => <FontAwesomeIcon icon={faTriangleExclamation} />,
+        position: "bottom-right",
+      });
+    }
+  };
+
   return (
-    <>
-      <form
-        className="contact-form"
-        onSubmit={handleSubmit((data) => sendMail(data))}
-      >
+    <div className="form-content">
+      <h1 className="form-title">{t("formTitle")}</h1>
+      <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="name">{t("formNameLabel")} *</label>
         <input
           {...register("name", { required: true })}
@@ -60,7 +93,7 @@ export function ContactForm() {
           className={errors.object ? "form-input is-invalid" : "form-input"}
         />
         <label htmlFor="message">{t("formMessageLabel")} *</label>
-        <input
+        <textarea
           {...register("message", { required: true })}
           className={
             errors.message
@@ -68,30 +101,29 @@ export function ContactForm() {
               : "form-input form-message-input"
           }
         />
-        <input type="submit" className="form-submit-button" />
+        <input
+          type="submit"
+          className="form-submit-button"
+          onClick={() => {
+            checkErrors(errors);
+          }}
+        />
       </form>
-      <div
-        className={
-          errors.name || errors.email || errors.object || errors.message
-            ? "form-error-message form-error"
-            : "form-error-message"
-        }
-      >
-        {t("formErrorMessage")}
-      </div>
-      <div
-        className={
-          !errors.name &&
-          !errors.email &&
-          !errors.object &&
-          !errors.message &&
-          isSubmitted
-            ? "form-success-message form-success"
-            : "form-success-message"
-        }
-      >
-        {t("formSuccessMessage")}
-      </div>
-    </>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        closeButton={false}
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable={false}
+        pauseOnHover={false}
+        theme="colored"
+        transition={Slide}
+        limit={2}
+      />
+    </div>
   );
 }
