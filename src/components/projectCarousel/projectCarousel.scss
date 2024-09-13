@@ -74,6 +74,7 @@
                 height: 8px;
                 width: 8px;
                 transition: 0.3s ease-in-out;
+                background-color: $carousel-counter-color;
 
                 &:hover {
                     cursor: pointer;
@@ -86,10 +87,6 @@
 .light {
     .carousel-elements {
         .carousel-counter {
-            .counter-circle {
-                background-color: $background-color-light;
-            }
-
             .active {
                 background-color: $background-color-2-light;
             }
@@ -104,10 +101,6 @@
 .dark {
     .carousel-elements {
         .carousel-counter {
-            .counter-circle {
-                background-color: $background-color-dark;
-            }
-
             .active {
                 background-color: $background-color-2-dark;
             }
