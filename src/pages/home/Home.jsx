@@ -1,6 +1,9 @@
+// ----- Import traductions -----
 import { useTranslation } from "react-i18next";
+// ----- Import des styles -----
 import "./home.scss";
 
+// ----- Page d'accueil -----
 export function Home() {
   const { t } = useTranslation();
 

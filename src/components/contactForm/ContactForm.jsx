@@ -6,7 +6,7 @@ import {
   faTriangleExclamation,
   faCheck,
 } from "@fortawesome/free-solid-svg-icons";
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 import { ToastContainer, toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -19,37 +19,38 @@ export function ContactForm() {
     formState: { errors },
   } = useForm();
 
-  function onSubmit(data) {
-    notifySuccess();
-    sendMail(data);
-  }
+  // function onSubmit(data) {
+
+  //   sendMail(data);
+  // }
 
   function sendMail(data) {
+    notifySuccess();
     console.log(data);
-    // emailjs
-    //   .send(
-    //     import.meta.env.VITE_MAILER_SECRET,
-    //     import.meta.env.VITE_MAILER_TEMPLATE_SECRET,
-    //     {
-    //       name: data.name,
-    //       object: data.object,
-    //       message: data.message,
-    //       email: data.email,
-    //     },
-    //     {
-    //       publicKey: import.meta.env.VITE_MAILER_PUBLIC_KEY,
-    //     }
-    //   )
-    //   .then(
-    //     () => {
-    //       // Le mail a été envoyé
-    //       console.log("SUCCESS!");
-    //     },
-    //     (error) => {
-    //       // Le mail n'a pas été envoyé
-    //       console.log("FAILED...", error);
-    //     }
-    //   );
+    emailjs
+      .send(
+        import.meta.env.VITE_MAILER_SECRET,
+        import.meta.env.VITE_MAILER_TEMPLATE_SECRET,
+        {
+          name: data.name,
+          object: data.object,
+          message: data.message,
+          email: data.email,
+        },
+        {
+          publicKey: import.meta.env.VITE_MAILER_PUBLIC_KEY,
+        }
+      )
+      .then(
+        () => {
+          // Le mail a été envoyé
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          // Le mail n'a pas été envoyé
+          console.log("FAILED...", error);
+        }
+      );
     reset();
   }
 
@@ -76,7 +77,7 @@ export function ContactForm() {
   return (
     <div className="form-content">
       <h1 className="form-title">{t("formTitle")}</h1>
-      <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
+      <form className="contact-form" onSubmit={handleSubmit(sendMail)}>
         <label htmlFor="name">{t("formNameLabel")} *</label>
         <input
           {...register("name", { required: true })}

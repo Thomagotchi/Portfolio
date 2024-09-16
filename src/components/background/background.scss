@@ -31,18 +31,19 @@
 }
 
 .light-container {
-    left: calc((50vw - 50vh));
-    --speed: 80s;
+    top: 0;
+    left: 20vw;
+    --speed: 10s;
     --easing: cubic-bezier(0.1, 0.2, 0.2, 0.1);
     animation: rotate var(--speed) var(--easing) alternate infinite;
     position: absolute;
-    max-height: 110vh;
-    width: 110vh;
+    height: 100vh;
+    width: 100vh;
 }
 
 .left-light,
 .right-light {
-    --size: 40vw;
+    --size: 60vh;
     --speed: 60s;
     --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
     position: relative;
@@ -55,11 +56,11 @@
 
 .left-light {
     opacity: 0.9;
-    left: -40vw;
+    left: 60vw;
 }
 
 .right-light {
-    right: -60vw;
+    right: 30vw;
 }
 
 .light {
@@ -87,5 +88,108 @@
 
     .background .right-light {
         background-color: $background-color-3-dark;
+    }
+}
+
+@media (max-width: 1200px) {
+    .light-container {
+        left: 10vw;
+    }
+
+    .left-light,
+    .right-light {
+        --size: 40vh;
+    }
+
+    .left-light {
+        left: 80vw;
+    }
+    
+    .right-light {
+        right: 30vw;
+    }
+}
+
+@media (max-width: 800px) {
+    .light-container {
+        left: 0;
+    }
+
+    .left-light {
+        left: 95vw;
+    }
+    
+    .right-light {
+        right: 35vw;
+    }
+}
+
+@media (max-width: 720px) {
+    .light-container {
+        left: -10vw;
+    }
+
+    .left-light {
+        left: 110vw;
+    }
+    
+    .right-light {
+        right: 40vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .light-container {
+        left: -25vw;
+    }
+
+    .left-light {
+        left: 110vw;
+    }
+
+    .right-light {
+        right: 40vw;
+    }
+}
+
+@media (max-width: 500px) {
+    .light-container {
+        left: -30vw;
+    }
+
+    .left-light {
+        left: 120vw;
+    }
+    
+    .right-light {
+        right: 50vw;
+    }
+}
+
+@media (max-width: 430px) {
+    .light-container {
+        left: -40vw;
+    }
+
+    .left-light {
+        left: 140vw;
+    }
+    
+    .right-light {
+        right: 50vw;
+    }
+}
+
+@media (max-width: 390px) {
+    .light-container {
+        left: -45vw;
+    }
+
+    .left-light {
+        left: 160vw;
+    }
+    
+    .right-light {
+        right: 60vw;
     }
 }
