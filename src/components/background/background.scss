@@ -1,5 +1,7 @@
+// ----- import des variables de couleurs -----
 @use "../../styles/variables.scss" as *;
 
+// ----- Desktop -----
 .background {
     transition: 300ms ease-in-out;
     position: absolute;
@@ -33,7 +35,7 @@
 .light-container {
     top: 0;
     left: 20vw;
-    --speed: 10s;
+    --speed: 80s;
     --easing: cubic-bezier(0.1, 0.2, 0.2, 0.1);
     animation: rotate var(--speed) var(--easing) alternate infinite;
     position: absolute;
@@ -63,6 +65,7 @@
     right: 30vw;
 }
 
+// ----- Light + Dark Modes -----
 .light {
     .sticky-bg {
         background-color: $background-color-light;
@@ -91,6 +94,7 @@
     }
 }
 
+// ----- Responsive -----
 @media (max-width: 1200px) {
     .light-container {
         left: 10vw;
