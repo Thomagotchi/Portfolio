@@ -9,16 +9,83 @@ header {
     flex-direction: row;
     max-width: 1440px;
     align-items: center;
-    justify-content: space-between;
+
+    .hamburger-button {
+        display: none;
+        --s: 16px;
+
+        height: var(--s);
+        aspect-ratio: 1;
+        border: none;
+        padding: 0;
+        border-inline: calc(var(--s)/2) solid #0000;
+        box-sizing: content-box;
+        --_g1: linear-gradient(var(--c) 20%, #0000 0 80%, var(--c) 0) no-repeat content-box border-box;
+        --_g2: radial-gradient(circle closest-side at 50% 12.5%, var(--c) 95%, #0000) repeat-y content-box border-box;
+        background:
+            var(--_g2) left var(--_p, 0px) top,
+            var(--_g1) left calc(var(--s)/10 + var(--_p, 0px)) top,
+            var(--_g2) right var(--_p, 0px) top,
+            var(--_g1) right calc(var(--s)/10 + var(--_p, 0px)) top;
+        background-size:
+            20% 80%,
+            40% 100%;
+        position: relative;
+        clip-path: inset(0 25%);
+        -webkit-mask: linear-gradient(90deg, #0000, #000 25% 75%, #0000);
+        cursor: pointer;
+        transition:
+            background-position .3s var(--_s, .2s),
+            clip-path 0s var(--_s, .6s);
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    .hamburger-button:before,
+    .hamburger-button:after {
+        content: "";
+        position: absolute;
+        border-radius: var(--s);
+        inset: 40% 0;
+        background: var(--c);
+        transition: transform .3s calc(.3s - var(--_s, .3s));
+    }
+
+    .hamburger-active {
+        clip-path: inset(0);
+        --_p: calc(-1*var(--s));
+        --_s: 0s;
+    }
+
+    .hamburger-active:before {
+        transform: rotate(45deg);
+    }
+
+    .hamburger-active:after {
+        transform: rotate(-45deg);
+    }
+
+    .hamburger-button:focus-visible {
+        clip-path: none;
+        -webkit-mask: none;
+        border: none;
+        outline: 2px solid var(--c);
+        outline-offset: 5px;
+    }
 
     .active {
         font-weight: 700;
     }
 
+    .header-logo {
+        margin-right: 20px;
+    }
+
     a {
         height: fit-content;
-        transition:200ms ease-in-out;
-        
+        transition: 200ms ease-in-out;
+
         svg {
             transition: 200ms ease-in-out;
         }
@@ -26,6 +93,7 @@ header {
 
     .header-left {
         display: flex;
+        margin-right: auto;
         flex-direction: row;
         align-items: center;
         gap: 20px;
@@ -37,6 +105,7 @@ header {
     }
 
     .header-right {
+        margin-left: auto;
         display: flex;
         gap: 20px;
 
@@ -50,6 +119,15 @@ header {
         }
     }
 
+    .hamburger-menu-background {
+        position: absolute;
+        top: 0;
+        right: -200px;
+        height: 100vh;
+        width: 180px;
+        transition: 0.1s ease-in-out;
+        z-index: 3;
+    }
 }
 
 .light header {
@@ -59,8 +137,17 @@ header {
         color: $text-color-light;
     }
 
-    svg:hover, a:hover {
+    svg:hover,
+    a:hover {
         color: $background-color-2-light;
+    }
+
+    .hamburger-button {
+        --c: #252422;
+    }
+
+    .hamburger-menu-background {
+        background-color: $background-color-light;
     }
 }
 
@@ -71,7 +158,91 @@ header {
         color: $text-color-dark;
     }
 
-    svg:hover, a:hover {
+    svg:hover,
+    a:hover {
         color: $background-color-2-dark;
+    }
+
+    .hamburger-button {
+        --c: #FFFCF2;
+    }
+
+    .hamburger-menu-background {
+        background-color: $background-color-dark;
+    }
+}
+
+@media (max-width: 780px) {
+    .header {
+        padding: 20px 20px 0 20px;
+
+        .hamburger-button {
+            display: flex;
+        }
+
+        .header-left {
+            margin-right: 0;
+            margin-left: auto;
+            gap: 15px;
+        }
+
+        .header-center,
+        .header-right {
+            position: absolute;
+            opacity: 0;
+            transition: 0.1s ease-in-out;
+        }
+
+        .header-center {
+            width: 90px;
+            flex-direction: column;
+            gap: 20px;
+            top: 78px;
+            right: -100px;
+        }
+
+        .header-right {
+            gap: 15px;
+            top: 203px;
+            right: -100px;
+        }
+    }
+
+    .header:has(.hamburger-active) {
+        .hamburger-button {
+            z-index: 4;
+            display: flex;
+        }
+
+        .header-center {
+            position: absolute;
+            z-index: 4;
+            opacity: 1;
+            top: 78px;
+            right: 45px;
+        }
+
+        .header-right {
+            position: absolute;
+            z-index: 4;
+            opacity: 1;
+            top: 203px;
+            right: 45px;
+        }
+
+        .hamburger-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 2;
+        }
+
+        .hamburger-menu-background {
+            right: 0;
+            box-shadow: 0px -2px 5px 5px rgba(0, 0, 0, 0.20);
+        }
     }
 }
