@@ -19,38 +19,33 @@ export function ContactForm() {
     formState: { errors },
   } = useForm();
 
-  // function onSubmit(data) {
-
-  //   sendMail(data);
-  // }
-
   function sendMail(data) {
     notifySuccess();
     console.log(data);
-    emailjs
-      .send(
-        import.meta.env.VITE_MAILER_SECRET,
-        import.meta.env.VITE_MAILER_TEMPLATE_SECRET,
-        {
-          name: data.name,
-          object: data.object,
-          message: data.message,
-          email: data.email,
-        },
-        {
-          publicKey: import.meta.env.VITE_MAILER_PUBLIC_KEY,
-        }
-      )
-      .then(
-        () => {
-          // Le mail a été envoyé
-          console.log("SUCCESS!");
-        },
-        (error) => {
-          // Le mail n'a pas été envoyé
-          console.log("FAILED...", error);
-        }
-      );
+    // emailjs
+    //   .send(
+    //     import.meta.env.VITE_MAILER_SECRET,
+    //     import.meta.env.VITE_MAILER_TEMPLATE_SECRET,
+    //     {
+    //       name: data.name,
+    //       object: data.object,
+    //       message: data.message,
+    //       email: data.email,
+    //     },
+    //     {
+    //       publicKey: import.meta.env.VITE_MAILER_PUBLIC_KEY,
+    //     }
+    //   )
+    //   .then(
+    //     () => {
+    //       // Le mail a été envoyé
+    //       console.log("SUCCESS!");
+    //     },
+    //     (error) => {
+    //       // Le mail n'a pas été envoyé
+    //       console.log("FAILED...", error);
+    //     }
+    //   );
     reset();
   }
 

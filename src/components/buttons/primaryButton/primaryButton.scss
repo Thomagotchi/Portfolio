@@ -1,5 +1,7 @@
+// ----- Import des couleurs -----
 @use "../../../styles/variables.scss" as *;
 
+// ----- Version Desktop -----
 .primary-button-container {
     height: 60px;
     width: 200px;
@@ -47,12 +49,14 @@
     }
 }
 
+// ----- Animation -----
 @keyframes button-shine {
     100% {
         transform: rotate(25.91deg) translate(210px, -110px);
     }
 }
 
+// ----- Light / Dark Modes -----
 .light {
     color: $text-color-light;
 
@@ -85,6 +89,7 @@
     }
 }
 
+// ----- Version Mobile -----
 @media (max-width: 620px) {
     .primary-button-container {
         height: 50px;

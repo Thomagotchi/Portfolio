@@ -1,5 +1,7 @@
+// ----- Import des couleurs -----
 @use "../../styles/variables.scss" as *;
 
+// ----- Version Desktop -----
 .about-page-content {
     display: flex;
     flex-direction: column;
@@ -79,6 +81,7 @@
     }
 }
 
+// ----- Light / Dark Modes -----
 .light .left-quote,
 .light .right-quote {
     color: $background-color-2-light;
@@ -89,6 +92,7 @@
     color: $background-color-2-dark;
 }
 
+// ----- Version mobile -----
 @media (max-width: 1028px) {
     .about-page-content {
         gap: 80px;
@@ -107,7 +111,6 @@
     }
 }
 
-// Version mobile
 @media (max-width: 620px) {
     .about-page-content {
         .about-text-container {

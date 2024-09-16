@@ -1,5 +1,7 @@
+// ----- Import des couleurs -----
 @use "../../../styles/variables.scss" as *;
 
+// ----- Version Desktop -----
 #theme-checkbox {
   height: 20px;
   width: 20px;
@@ -44,6 +46,7 @@
   ;
 }
 
+// ----- Light / Dark Modes -----
 .light .theme-switch:hover {
   color: $background-color-2-light;
 }
