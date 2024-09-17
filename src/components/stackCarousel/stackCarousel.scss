@@ -1,5 +1,7 @@
+// ----- Import des couleurs -----
 @use "../../styles/variables.scss" as *;
 
+//----- Version Desktop -----
 .stack-container {
     display: flex;
     flex-direction: column;
@@ -50,6 +52,16 @@
     }
 }
 
+// ----- Light / Dark Modes -----
+.light .carousel-logos {
+    fill: $text-color-light;
+}
+
+.dark .carousel-logos {
+    fill: $text-color-dark;
+}
+
+// ----- Animation -----
 @keyframes slide {
     from {
         transform: translateX(0);
@@ -58,12 +70,4 @@
     to {
         transform: translateX(-100%);
     }
-}
-
-.light .carousel-logos {
-    fill: $text-color-light;
-}
-
-.dark .carousel-logos {
-    fill: $text-color-dark;
 }

@@ -145,7 +145,6 @@ body:has(.modal) {
                             right: 0;
                         }
                     }
-
                 }
             }
         }
@@ -220,6 +219,7 @@ body:has(.modal) {
     }
 }
 
+// ----- Version Mobile -----
 @media (max-width: 840px) {
     body:has(.modal) {
         #portal {
@@ -233,16 +233,16 @@ body:has(.modal) {
                     width: calc(100vw - 40px);
                     min-height: 457px;
                     height: fit-content;
-    
+
                     .carousel-caption {
                         padding: 20px 20px 14px 20px;
-    
+
                         .carousel-heading {
                             margin: 0 18px;
                             flex-direction: column;
                             align-items: start;
                             gap: 14px;
-    
+
                             .modal-tags-container {
                                 padding: 0;
                             }
@@ -261,7 +261,7 @@ body:has(.modal) {
                             width: 100%;
                             bottom: -20px;
                             position: relative;
-    
+
                             .secondary-button {
                                 left: calc(50% - 30px);
                                 bottom: -6px;
@@ -270,11 +270,11 @@ body:has(.modal) {
                                 width: 60px;
                                 border-radius: 20px;
                             }
-    
+
                             .prev-project {
                                 left: 0;
                             }
-    
+
                             .next-project {
                                 right: 0;
                             }
@@ -293,16 +293,16 @@ body:has(.modal) {
                 .modal-container {
                     .carousel-caption {
                         padding: 20px 20px 14px 20px;
-    
+
                         .carousel-heading {
                             .modal-title {
                                 font-size: 20px;
                                 font-weight: 700;
                             }
-    
+
                             .modal-tags-container {
                                 gap: 8px;
-    
+
                                 li {
                                     font-size: 12px;
                                     min-width: 24px;
@@ -335,7 +335,7 @@ body:has(.modal) {
 
                     .carousel-caption {
                         padding: 20px 20px 14px 20px;
-    
+
                         .carousel-heading {
                             margin: 0;
 
