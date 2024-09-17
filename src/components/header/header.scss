@@ -98,7 +98,14 @@ header {
         margin-right: auto;
         flex-direction: row;
         align-items: center;
-        gap: 20px;
+        
+        .language-toggle {
+            margin-right: 20px;
+        }
+
+        .theme-switch {
+            margin-right: 12px;
+        }
     }
 
     .header-center {
@@ -187,7 +194,14 @@ header {
         .header-left {
             margin-right: 0;
             margin-left: auto;
-            gap: 15px;
+
+            .language-toggle {
+                margin-right: 15px;
+            }
+
+            .theme-switch {
+                margin-right: 7px;
+            }
         }
 
         .header-center,
