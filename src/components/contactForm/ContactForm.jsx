@@ -6,7 +6,7 @@ import {
   faTriangleExclamation,
   faCheck,
 } from "@fortawesome/free-solid-svg-icons";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 import { ToastContainer, toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -107,7 +107,7 @@ export function ContactForm() {
       </form>
       <ToastContainer
         position="bottom-right"
-        autoClose={5000}
+        autoClose={50000}
         hideProgressBar
         newestOnTop={false}
         closeOnClick
