@@ -1,6 +1,7 @@
 // ----- Import des couleurs -----
 @use "../../styles/variables.scss" as *;
 
+// ----- Version Desktop -----
 body:has(.modal-container) {
     overflow: hidden;
 }
@@ -10,10 +11,9 @@ body:has(.modal-container) {
 }
 
 body:has(.modal) {
-
     #portal {
         display: flex;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         height: 100vh;

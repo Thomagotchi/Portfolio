@@ -1,6 +1,7 @@
+// ----- Import des couleurs -----
 @use "../../styles/variables.scss" as *;
 
-//--- SASS Pour le composant Carousel ---
+//----- Version Desktop -----
 .carousel-container {
     position: relative;
     display: flex;
@@ -84,6 +85,7 @@
     }
 }
 
+// ----- Light / Dark Modes -----
 .light {
     .carousel-elements {
         .carousel-counter {
@@ -112,7 +114,7 @@
     }
 }
 
-//--- Responsive Pour le composant Carousel ---
+//----- Version Mobile -----
 @media (max-width: 1048px) {
     // .carousel-container {
     //     .carousel-elements {

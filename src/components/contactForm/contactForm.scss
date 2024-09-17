@@ -1,6 +1,7 @@
 // ----- Import des couleurs -----
 @use "../../styles/variables.scss" as *;
 
+// ----- Version Desktop -----
 .form-content {
     display: flex;
     flex-direction: column;
@@ -168,7 +169,7 @@
             }
         }
     }
-    
+
     .Toastify {
         width: 100vw!important;
         height: fit-content!important ;

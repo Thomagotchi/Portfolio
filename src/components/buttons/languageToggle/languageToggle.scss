@@ -1,5 +1,7 @@
+// ----- Import des couleurs -----
 @use "../../../styles/variables.scss" as *;
 
+// ----- Version Desktop -----
 .language-toggle {
     display: flex;
     flex-direction: row;
@@ -18,6 +20,7 @@
     }
 }
 
+// ----- Light + Dark Modes -----
 .light .language-toggle .english-toggle:hover,
 .light .language-toggle .french-toggle:hover {
     transition: 200ms;
@@ -30,6 +33,7 @@
     color: $background-color-2-dark;
 }
 
+// ----- Animation -----
 .language-toggle-fr,
 .language-toggle-en {
 
