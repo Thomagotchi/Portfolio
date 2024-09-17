@@ -107,18 +107,3 @@
         }
     }
 }
-
-@media (max-width: 440px) {
-    .projects-container {
-        .projects-gallery {
-            .project-card {
-                width: 100%;
-                align-items: center;
-
-                img {
-                    object-fit: cover;
-                }
-            }
-        }
-    }
-}
