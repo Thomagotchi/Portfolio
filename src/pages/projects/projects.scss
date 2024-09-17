@@ -1,3 +1,4 @@
+// ----- Version Desktop -----
 .projects-container {
     display: flex;
     flex-direction: column;
@@ -31,6 +32,7 @@
 
         .project-card {
             width: fit-content;
+
             img {
                 height: 215px;
                 width: 400px;
@@ -62,29 +64,7 @@
     
         .projects-gallery {
             grid-template-columns: auto;
-    
-            .project-card {
-                width: fit-content;
-                img {
-                    height: 215px;
-                    width: 400px;
-                }
-            }
         }
     }
 }
 
-@media (max-width: 440px) {
-    .projects-container {
-        .projects-gallery {
-            .project-card {
-                width: 100%;
-                align-items: center;
-
-                img {
-                    object-fit: cover;
-                }
-            }
-        }
-    }
-}

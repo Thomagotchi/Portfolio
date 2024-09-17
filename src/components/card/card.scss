@@ -1,5 +1,7 @@
+// ----- Import des couleurs -----
 @use "../../styles/variables.scss" as *;
 
+// ----- Version Desktop -----
 .project-card {
     display: flex;
     height: 295px;
@@ -69,6 +71,7 @@
     }
 }
 
+// ----- Light + Dark Modes -----
 .light {
     .project-card {
         filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15));
@@ -90,5 +93,32 @@
         color: $text-color-dark;
         background-color: $background-color-dark;
         box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.40);
+    }
+}
+
+// ----- Version mobile -----
+@media (max-width: 870px) {
+    .project-card {
+        width: fit-content;
+
+        img {
+            height: 215px;
+            width: 400px;
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .projects-container {
+        .projects-gallery {
+            .project-card {
+                width: 100%;
+                align-items: center;
+
+                img {
+                    object-fit: cover;
+                }
+            }
+        }
     }
 }
