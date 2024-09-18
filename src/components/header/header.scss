@@ -147,14 +147,10 @@ header {
         color: $text-color-light;
     }
 
-    svg:hover,
-    a:hover {
-        color: $background-color-2-light;
-    }
-    
-    @media (hover: hover) {
-        button:hover {
-            background-color: blue;
+    @media (hover:hover) {
+        svg:hover,
+        a:hover {
+            color: $background-color-2-light;
         }
     }
 
@@ -174,10 +170,17 @@ header {
         color: $text-color-dark;
     }
 
-    svg:hover,
-    a:hover {
-        color: $background-color-2-dark;
+    @media (hover:hover) {
+        svg:hover,
+        a:hover {
+            color: $background-color-2-dark;
+        }
     }
+
+    // svg:hover,
+    // a:hover {
+    //     color: $background-color-2-dark;
+    // }
 
     .hamburger-button {
         --c: #FFFCF2;
