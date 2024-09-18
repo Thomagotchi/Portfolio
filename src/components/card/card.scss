@@ -70,7 +70,8 @@
 // ----- Light + Dark Modes -----
 .light {
     .project-card {
-        filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15));
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+        // filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15));
     }
 
     .card-text {
@@ -82,7 +83,8 @@
 
 .dark {
     .project-card {
-        filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.45));
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.45);
+        // filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.45));
     }
 
     .card-text {
