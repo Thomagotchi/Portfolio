@@ -21,11 +21,6 @@
   box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
   border-radius: 999px;
   transition: 500ms, color 200ms ease-in-out;
-
-
-  &:hover {
-    cursor: pointer;
-  }
 }
 
 .light .theme-switch {
@@ -47,10 +42,16 @@
 }
 
 // ----- Light / Dark Modes -----
-.light .theme-switch:hover {
-  color: $background-color-2-light;
+@media (hover:hover) {
+  .light .theme-switch:hover {
+    color: $background-color-2-light;
+    cursor: pointer;
+  }
 }
 
-.dark .theme-switch:hover {
-  color: $background-color-2-dark;
+@media (hover:hover) {
+  .dark .theme-switch:hover {
+    color: $background-color-2-dark;
+    cursor: pointer;
+  }
 }

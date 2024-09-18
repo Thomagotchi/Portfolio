@@ -14,23 +14,24 @@
     width: 20px;
     font-weight: 700;
     align-items: center;
+}
 
-    &:hover {
+// ----- Light + Dark Modes -----
+@media (hover:hover) {
+    .light .language-toggle .english-toggle:hover,
+    .light .language-toggle .french-toggle:hover {
+        transition: 200ms;
+        color: $background-color-2-light;
         cursor: pointer;
     }
 }
 
-// ----- Light + Dark Modes -----
-.light .language-toggle .english-toggle:hover,
-.light .language-toggle .french-toggle:hover {
-    transition: 200ms;
-    color: $background-color-2-light;
-}
-
-.dark .language-toggle .english-toggle:hover,
-.dark .language-toggle .french-toggle:hover {
-    transition: 200ms;
-    color: $background-color-2-dark;
+@media (hover:hover) {
+    .dark .language-toggle .english-toggle:hover,
+    .dark .language-toggle .french-toggle:hover {
+        transition: 200ms;
+        color: $background-color-2-dark;
+    }
 }
 
 // ----- Animation -----
