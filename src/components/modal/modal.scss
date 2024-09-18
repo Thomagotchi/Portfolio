@@ -47,10 +47,6 @@ body:has(.modal) {
                     margin: 7px;
                     color: $text-color-light;
                     transition: 0.2s ease-in-out;
-
-                    &:hover {
-                        cursor: pointer;
-                    }
                 }
 
                 .carousel-caption {
@@ -168,10 +164,6 @@ body:has(.modal) {
 .light .modal-container {
     background-color: $background-color-light;
 
-    svg:hover {
-        color: $background-color-2-light;
-    }
-
     .modal-tags-container {
         li {
             color: $background-color-light;
@@ -179,25 +171,32 @@ body:has(.modal) {
         }
     }
 
-    .prev-project:hover {
-        color: $background-color-2-light;
-    }
+    @media (hover:hover) {
+        svg:hover {
+            color: $background-color-2-light;
+        }
 
-    .next-project:hover {
-        color: $background-color-2-light;
-    }
-
-    .secondary-button:hover {
-        background-color: $background-color-2-light;
-    }
+        .modal-close-button:hover {
+            color: $background-color-2-light!important;
+            cursor: pointer;
+        }
+        
+        .prev-project:hover {
+            color: $background-color-2-light;
+        }
+        
+        .next-project:hover {
+            color: $background-color-2-light;
+        }
+        
+        .secondary-button:hover {
+            background-color: $background-color-2-light;
+        }
+    } 
 }
 
 .dark .modal-container {
     background-color: $background-color-dark;
-
-    svg:hover {
-        color: $background-color-2-dark;
-    }
 
     .modal-tags-container {
         li {
@@ -206,17 +205,28 @@ body:has(.modal) {
         }
     }
 
-    .prev-project:hover {
-        color: $background-color-2-dark;
-    }
+    @media (hover:hover) {
+        svg:hover {
+            color: $background-color-2-dark;
+        }
+        
+        .modal-close-button:hover {
+            color: $background-color-2-dark!important;
+            cursor: pointer;
+        }
 
-    .next-project:hover {
-        color: $background-color-2-dark;
-    }
-
-    .secondary-button:hover {
-        background-color: $background-color-2-dark;
-    }
+        .prev-project:hover {
+            color: $background-color-2-dark;
+        }
+    
+        .next-project:hover {
+            color: $background-color-2-dark;
+        }
+    
+        .secondary-button:hover {
+            background-color: $background-color-2-dark;
+        }
+    } 
 }
 
 // ----- Version Mobile -----
