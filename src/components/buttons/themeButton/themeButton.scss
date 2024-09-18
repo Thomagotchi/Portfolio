@@ -27,6 +27,7 @@
   --ray-size: calc(var(--size) * -0.4);
   --offset-orthogonal: calc(var(--size) * 0.75);
   --offset-diagonal: calc(var(--size) * 0.55);
+  -webkit-transform: scale(0.60);
   transform: scale(0.60);
   box-shadow:
     inset 0 0 0 var(--size),
