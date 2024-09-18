@@ -151,6 +151,12 @@ header {
     a:hover {
         color: $background-color-2-light;
     }
+    
+    @media (hover: hover) {
+        button:hover {
+            background-color: blue;
+        }
+    }
 
     .hamburger-button {
         --c: #252422;
