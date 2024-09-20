@@ -9,11 +9,16 @@ import {
 // import emailjs from "@emailjs/browser";
 import { ToastContainer, toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ReCAPTCHA from "react-google-recaptcha";
+import { useState } from "react";
 
 export function ContactForm() {
   const { t } = useTranslation();
+  const [hasCompleteCaptcha, setHasCompleteCaptcha] = useState(false);
   const {
     register,
+    setError,
+    clearErrors,
     handleSubmit,
     reset,
     formState: { errors },
@@ -59,7 +64,24 @@ export function ContactForm() {
   };
 
   const checkErrors = (errors) => {
-    if (errors.name || errors.email || errors.object || errors.message) {
+    if (hasCompleteCaptcha) {
+      clearErrors("captcha");
+    }
+
+    if (
+      errors.name ||
+      errors.email ||
+      errors.object ||
+      errors.message ||
+      !hasCompleteCaptcha
+    ) {
+      if (!hasCompleteCaptcha) {
+        setError("captcha", {
+          type: "custom",
+          message: "Vous devez valider le captcha",
+        });
+      }
+
       // This removes all toasts from before
       toast.dismiss();
       toast.error(t("formErrorMessage"), {
@@ -97,6 +119,12 @@ export function ContactForm() {
               : "form-input form-message-input"
           }
         />
+        <ReCAPTCHA
+          sitekey={import.meta.env.VITE_GOOGLE_RECAPTCHA_PUBLIC_KEY}
+          onChange={() => setHasCompleteCaptcha(true)}
+          onErrored={() => setHasCompleteCaptcha(false)}
+          onExpired={() => setHasCompleteCaptcha(false)}
+        />
         <input
           type="submit"
           className="form-submit-button"
@@ -107,7 +135,7 @@ export function ContactForm() {
       </form>
       <ToastContainer
         position="bottom-right"
-        autoClose={50000}
+        autoClose={5000}
         hideProgressBar
         newestOnTop={false}
         closeOnClick

@@ -172,13 +172,12 @@
     }
 
     .Toastify {
-        width: 100vw !important;
+        // width: 100vw !important;
         height: fit-content !important;
 
         .Toastify__toast {
-            position: fixed;
+            right: -45px;
             bottom: 20px;
-            left: 30px !important;
             border-radius: 6px !important;
 
             .Toastify__toast-body {

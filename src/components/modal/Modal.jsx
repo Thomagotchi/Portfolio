@@ -66,6 +66,16 @@ export function Modal({ closeFunction, currentIndex }) {
               >
                 {t("modalPreviousButton")}
               </p>
+              {/* <button
+                className="prev-project-responsive"
+                onClick={() => {
+                  projectIndex === 0
+                    ? setProjectIndex(projects.length - 1)
+                    : setProjectIndex(projectIndex - 1);
+                }}
+              >
+                <FontAwesomeIcon icon={faBackward} />
+              </button> */}
               <Link
                 className="secondary-button"
                 target="_blank"
@@ -83,6 +93,16 @@ export function Modal({ closeFunction, currentIndex }) {
               >
                 {t("modalNextButton")}
               </p>
+              {/* <button
+                className="next-project-responsive"
+                onClick={() => {
+                  projectIndex === projects.length - 1
+                    ? setProjectIndex(0)
+                    : setProjectIndex(projectIndex + 1);
+                }}
+              >
+                <FontAwesomeIcon icon={faForward} />
+              </button> */}
             </div>
           </div>
         </div>
