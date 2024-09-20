@@ -6,7 +6,7 @@ import {
   faTriangleExclamation,
   faCheck,
 } from "@fortawesome/free-solid-svg-icons";
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 import { ToastContainer, toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -26,7 +26,6 @@ export function ContactForm() {
 
   function sendMail(data) {
     notifySuccess();
-    console.log(data);
     emailjs
       .send(
         import.meta.env.VITE_MAILER_SECRET,
