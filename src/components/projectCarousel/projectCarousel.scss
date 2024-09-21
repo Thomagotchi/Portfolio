@@ -94,8 +94,10 @@
             }
         }
 
-        .carousel-arrow:hover {
-            color: $background-color-2-light;
+        @media (hover:hover) {
+            .carousel-arrow:hover {
+                color: $background-color-2-light;
+            }
         }
     }
 }
@@ -108,8 +110,10 @@
             }
         }
 
-        .carousel-arrow:hover {
-            color: $background-color-2-dark;
+        @media (hover:hover) {
+            .carousel-arrow:hover {
+                color: $background-color-2-dark;
+            }
         }
     }
 }

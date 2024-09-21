@@ -56,16 +56,6 @@ export function Modal({ closeFunction, currentIndex }) {
               description={projects[projectIndex].description}
             />
             <div className="carousel-caption-buttons">
-              {/* <p
-                className="prev-project"
-                onClick={() =>
-                  projectIndex === 0
-                    ? setProjectIndex(projects.length - 1)
-                    : setProjectIndex(projectIndex - 1)
-                }
-              >
-                {t("modalPreviousButton")}
-              </p> */}
               <button
                 className="prev-project"
                 onClick={() => {
@@ -83,16 +73,6 @@ export function Modal({ closeFunction, currentIndex }) {
               >
                 Github
               </Link>
-              {/* <p
-                className="next-project"
-                onClick={() =>
-                  projectIndex === projects.length - 1
-                    ? setProjectIndex(0)
-                    : setProjectIndex(projectIndex + 1)
-                }
-              >
-                {t("modalNextButton")}
-              </p> */}
               <button
                 className="next-project"
                 onClick={() => {
