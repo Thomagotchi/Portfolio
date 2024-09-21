@@ -4,7 +4,7 @@ import "./modal.scss";
 import * as allProjects from "../../assets/data/projects.json";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faX } from "@fortawesome/free-solid-svg-icons";
+import { faX, faForward, faBackward } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import ReactDom from "react-dom";
 
@@ -56,7 +56,7 @@ export function Modal({ closeFunction, currentIndex }) {
               description={projects[projectIndex].description}
             />
             <div className="carousel-caption-buttons">
-              <p
+              {/* <p
                 className="prev-project"
                 onClick={() =>
                   projectIndex === 0
@@ -65,9 +65,9 @@ export function Modal({ closeFunction, currentIndex }) {
                 }
               >
                 {t("modalPreviousButton")}
-              </p>
-              {/* <button
-                className="prev-project-responsive"
+              </p> */}
+              <button
+                className="prev-project"
                 onClick={() => {
                   projectIndex === 0
                     ? setProjectIndex(projects.length - 1)
@@ -75,7 +75,7 @@ export function Modal({ closeFunction, currentIndex }) {
                 }}
               >
                 <FontAwesomeIcon icon={faBackward} />
-              </button> */}
+              </button>
               <Link
                 className="secondary-button"
                 target="_blank"
@@ -83,7 +83,7 @@ export function Modal({ closeFunction, currentIndex }) {
               >
                 Github
               </Link>
-              <p
+              {/* <p
                 className="next-project"
                 onClick={() =>
                   projectIndex === projects.length - 1
@@ -92,9 +92,9 @@ export function Modal({ closeFunction, currentIndex }) {
                 }
               >
                 {t("modalNextButton")}
-              </p>
-              {/* <button
-                className="next-project-responsive"
+              </p> */}
+              <button
+                className="next-project"
                 onClick={() => {
                   projectIndex === projects.length - 1
                     ? setProjectIndex(0)
@@ -102,7 +102,7 @@ export function Modal({ closeFunction, currentIndex }) {
                 }}
               >
                 <FontAwesomeIcon icon={faForward} />
-              </button> */}
+              </button>
             </div>
           </div>
         </div>

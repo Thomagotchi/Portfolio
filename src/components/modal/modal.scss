@@ -133,6 +133,10 @@ body:has(.modal) {
                             justify-content: center;
                         }
 
+                        .prev-project, .next-project {
+                            font-size: 20px;
+                        }
+
                         .prev-project {
                             left: 0;
                         }
@@ -269,24 +273,15 @@ body:has(.modal) {
 
                         .carousel-caption-buttons {
                             width: 100%;
-                            bottom: -20px;
+                            bottom: -10px;
                             position: relative;
 
                             .secondary-button {
-                                left: calc(50% - 30px);
+                                left: calc(50% - 42px);
                                 bottom: -6px;
                                 font-weight: 600;
                                 height: 26px;
-                                width: 60px;
                                 border-radius: 20px;
-                            }
-
-                            .prev-project {
-                                left: 0;
-                            }
-
-                            .next-project {
-                                right: 0;
                             }
                         }
                     }
@@ -361,10 +356,6 @@ body:has(.modal) {
                             margin: 20px 0 20px 0;
                             width: 100%;
                             height: fit-content;
-                        }
-
-                        .carousel-caption-buttons {
-                            font-size: 12px;
                         }
                     }
                 }
