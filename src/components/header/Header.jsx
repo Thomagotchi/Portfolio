@@ -68,7 +68,7 @@ export function Header() {
           onClick={() => {
             setIsHamburgerActive(false);
           }}
-          to="/A-Propos"
+          to="/a-propos"
         >
           {t("headerAbout")}{" "}
         </NavLink>
@@ -76,7 +76,7 @@ export function Header() {
           onClick={() => {
             setIsHamburgerActive(false);
           }}
-          to="/Realisations"
+          to="/realisations"
         >
           {t("headerWorks")}
         </NavLink>
@@ -84,7 +84,7 @@ export function Header() {
           onClick={() => {
             setIsHamburgerActive(false);
           }}
-          to="Contact"
+          to="contact"
         >
           {t("headerContact")}
         </NavLink>

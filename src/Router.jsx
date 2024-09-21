@@ -16,9 +16,9 @@ export function Router() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/A-Propos" element={<About />} />
-          <Route path="/Realisations" element={<Projects />} />
-          <Route path="/Contact" element={<Contact />} />
+          <Route path="/a-propos" element={<About />} />
+          <Route path="/realisations" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
 
           {/* Pour gérer les erreurs */}
           <Route path="*" element={<Navigate to="/404" />} />

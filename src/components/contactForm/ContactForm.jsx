@@ -2,10 +2,7 @@ import "./contactForm.scss";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faTriangleExclamation,
-  faCheck,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -28,30 +25,30 @@ export function ContactForm() {
   function sendMail(data) {
     notifySuccess();
     console.log(data);
-    // emailjs
-    //   .send(
-    //     import.meta.env.VITE_MAILER_SECRET,
-    //     import.meta.env.VITE_MAILER_TEMPLATE_SECRET,
-    //     {
-    //       name: data.name,
-    //       object: data.object,
-    //       message: data.message,
-    //       email: data.email,
-    //     },
-    //     {
-    //       publicKey: import.meta.env.VITE_MAILER_PUBLIC_KEY,
-    //     }
-    //   )
-    //   .then(
-    //     () => {
-    //       // Le mail a été envoyé
-    //       console.log("SUCCESS!");
-    //     },
-    //     (error) => {
-    //       // Le mail n'a pas été envoyé
-    //       console.log("FAILED...", error);
-    //     }
-    //   );
+    emailjs
+      .send(
+        import.meta.env.VITE_MAILER_SECRET,
+        import.meta.env.VITE_MAILER_TEMPLATE_SECRET,
+        {
+          name: data.name,
+          object: data.object,
+          message: data.message,
+          email: data.email,
+        },
+        {
+          publicKey: import.meta.env.VITE_MAILER_PUBLIC_KEY,
+        }
+      )
+      .then(
+        () => {
+          // Le mail a été envoyé
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          // Le mail n'a pas été envoyé
+          console.log("FAILED...", error);
+        }
+      );
     reset();
   }
 
@@ -141,7 +138,7 @@ export function ContactForm() {
       </form>
       <ToastContainer
         position="bottom-right"
-        autoClose={500000}
+        autoClose={5000}
         hideProgressBar
         newestOnTop={false}
         closeOnClick
