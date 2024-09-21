@@ -1,5 +1,7 @@
+// ----- Import des couleurs -----
 @use "../../styles/variables.scss" as *;
 
+// ----- Version Desktop -----
 .error-container {
     display: flex;
     flex-direction: column;
@@ -26,6 +28,7 @@
     }
 }
 
+// ----- Light / Dark Modes -----
 .light .error-container {
     p:hover {
         color: $background-color-2-light;
@@ -38,6 +41,7 @@
     }
 }
 
+// ----- Version mobile -----
 @media (max-width: 940px) {
     .error-container {
         gap: 14px;
