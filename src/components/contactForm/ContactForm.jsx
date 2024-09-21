@@ -14,6 +14,7 @@ import { useState } from "react";
 
 export function ContactForm() {
   const { t } = useTranslation();
+  const [failedCaptchaStyle, setFailedCaptchaStyle] = useState(false);
   const [hasCompleteCaptcha, setHasCompleteCaptcha] = useState(false);
   const {
     register,
@@ -26,30 +27,31 @@ export function ContactForm() {
 
   function sendMail(data) {
     notifySuccess();
-    emailjs
-      .send(
-        import.meta.env.VITE_MAILER_SECRET,
-        import.meta.env.VITE_MAILER_TEMPLATE_SECRET,
-        {
-          name: data.name,
-          object: data.object,
-          message: data.message,
-          email: data.email,
-        },
-        {
-          publicKey: import.meta.env.VITE_MAILER_PUBLIC_KEY,
-        }
-      )
-      .then(
-        () => {
-          // Le mail a été envoyé
-          console.log("SUCCESS!");
-        },
-        (error) => {
-          // Le mail n'a pas été envoyé
-          console.log("FAILED...", error);
-        }
-      );
+    console.log(data);
+    // emailjs
+    //   .send(
+    //     import.meta.env.VITE_MAILER_SECRET,
+    //     import.meta.env.VITE_MAILER_TEMPLATE_SECRET,
+    //     {
+    //       name: data.name,
+    //       object: data.object,
+    //       message: data.message,
+    //       email: data.email,
+    //     },
+    //     {
+    //       publicKey: import.meta.env.VITE_MAILER_PUBLIC_KEY,
+    //     }
+    //   )
+    //   .then(
+    //     () => {
+    //       // Le mail a été envoyé
+    //       console.log("SUCCESS!");
+    //     },
+    //     (error) => {
+    //       // Le mail n'a pas été envoyé
+    //       console.log("FAILED...", error);
+    //     }
+    //   );
     reset();
   }
 
@@ -64,6 +66,7 @@ export function ContactForm() {
 
   const checkErrors = (errors) => {
     if (hasCompleteCaptcha) {
+      setFailedCaptchaStyle(false);
       clearErrors("captcha");
     }
 
@@ -75,18 +78,12 @@ export function ContactForm() {
       !hasCompleteCaptcha
     ) {
       if (!hasCompleteCaptcha) {
+        setFailedCaptchaStyle(true);
         setError("captcha", {
           type: "custom",
           message: "Vous devez valider le captcha",
         });
       }
-
-      // This removes all toasts from before
-      toast.dismiss();
-      toast.error(t("formErrorMessage"), {
-        icon: () => <FontAwesomeIcon icon={faTriangleExclamation} />,
-        position: "bottom-right",
-      });
     }
   };
 
@@ -119,10 +116,20 @@ export function ContactForm() {
           }
         />
         <ReCAPTCHA
+          className={failedCaptchaStyle ? "captcha is-invalid" : "captcha"}
           sitekey={import.meta.env.VITE_GOOGLE_RECAPTCHA_PUBLIC_KEY}
-          onChange={() => setHasCompleteCaptcha(true)}
-          onErrored={() => setHasCompleteCaptcha(false)}
-          onExpired={() => setHasCompleteCaptcha(false)}
+          onChange={() => {
+            setHasCompleteCaptcha(true);
+            setFailedCaptchaStyle(false);
+          }}
+          onErrored={() => {
+            setHasCompleteCaptcha(false);
+            setFailedCaptchaStyle(true);
+          }}
+          onExpired={() => {
+            setHasCompleteCaptcha(false);
+            setFailedCaptchaStyle(true);
+          }}
         />
         <input
           type="submit"
@@ -134,7 +141,7 @@ export function ContactForm() {
       </form>
       <ToastContainer
         position="bottom-right"
-        autoClose={5000}
+        autoClose={500000}
         hideProgressBar
         newestOnTop={false}
         closeOnClick
@@ -145,7 +152,7 @@ export function ContactForm() {
         pauseOnHover={false}
         theme="colored"
         transition={Slide}
-        limit={2}
+        limit={1}
       />
     </div>
   );

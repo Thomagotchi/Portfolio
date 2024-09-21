@@ -58,6 +58,14 @@
             resize: none;
         }
 
+        .captcha {
+            width: fit-content;
+            display: flex;
+            margin: 2px auto 18px auto;
+            border-radius: 5px;
+            padding: 2px 0 0 2px;
+        }
+
         .form-submit-button {
             margin: 0 auto;
             width: 120px;
@@ -156,7 +164,7 @@
     .form-content {
         .form-title {
             font-size: 14px;
-            margin: 40px 0 30px 0;
+            margin: 20px 0 20px 0;
         }
 
         .contact-form {
@@ -170,20 +178,27 @@
             }
         }
     }
+}
 
+@media (max-width: 480px) {
     .Toastify {
-        // width: 100vw !important;
         height: fit-content !important;
 
         .Toastify__toast {
-            right: -45px;
-            bottom: 20px;
-            border-radius: 6px !important;
+            right: 0;
+            border-radius: 0px !important;
 
             .Toastify__toast-body {
+                flex: none;
+                display: flex;
+                justify-content: center;
+                width: calc(100vw - 28px)!important;
                 font-size: 12px !important;
+
+                .Toastify__toast-icon {
+                    margin-inline-end: 4px;
+                }
             }
         }
     }
-
 }
