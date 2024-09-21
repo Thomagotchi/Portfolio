@@ -24,6 +24,7 @@ export function Header() {
   return (
     <header className="header">
       <NavLink
+        aria-label="Home"
         to="/"
         onClick={() => {
           setIsHamburgerActive(false);
@@ -94,6 +95,7 @@ export function Header() {
           onClick={() => {
             setIsHamburgerActive(false);
           }}
+          aria-label="E-mail"
           target="_blank"
           to={`mailto:${informationsContact.email}`}
         >
@@ -103,6 +105,7 @@ export function Header() {
           onClick={() => {
             setIsHamburgerActive(false);
           }}
+          aria-label="Github"
           target="_blank"
           to={informationsContact.githubUrl}
         >
@@ -112,6 +115,7 @@ export function Header() {
           onClick={() => {
             setIsHamburgerActive(false);
           }}
+          aria-label="LinkedIn"
           target="_blank"
           to={informationsContact.linkedInUrl}
         >

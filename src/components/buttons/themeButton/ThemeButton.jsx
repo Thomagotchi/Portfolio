@@ -14,8 +14,10 @@ export function ThemeButton() {
   };
 
   return (
-    <label htmlFor="theme-checkbox" className="theme-switch">
+    <label className="theme-switch" htmlFor="theme-checkbox">
       <input
+        aria-label="theme"
+        name="theme-checkbox"
         id="theme-checkbox"
         type="checkbox"
         onChange={onChangeBtn}
