@@ -1,6 +1,9 @@
-import { Link } from "react-router-dom";
+// ----- import du SASS -----
 import "./primaryButton.scss";
+// ----- import de fonction React -----
+import { Link } from "react-router-dom";
 
+// ----- Composant 'PrimaryButton' -----
 const PrimaryButton = ({ url, text }) => {
   return (
     <div className="primary-button-container">

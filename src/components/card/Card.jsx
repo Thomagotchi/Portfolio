@@ -1,20 +1,27 @@
-import { Link } from "react-router-dom";
-import * as allProjects from "../../assets/data/projects.json";
+// ----- import du SASS -----
 import "./card.scss";
-import { useTranslation } from "react-i18next";
-import { Modal } from "../modal/Modal";
+// ----- import de fonction React -----
+import { Link } from "react-router-dom";
 import { useState } from "react";
+// ----- import de fonction de traduction -----
+import { useTranslation } from "react-i18next";
+// ----- import des données des projets -----
+import * as allProjects from "../../assets/data/projects.json";
+// ----- import du composant 'Modal' -----
+import { Modal } from "../modal/Modal";
 
+// Cette fonction r'envoie un element HTML pour chaque tag d'un projet
 const CreateTag = ({ tags }) => {
   return <p className="card-tags">{tags.join(" + ")}</p>;
 };
 
+// ----- Composant 'Card' -----
 export function Card({ project }) {
   const { t } = useTranslation();
   const [openModal, setOpenModal] = useState(false);
-
   const currentProjectIndex = allProjects.year2024.projects.indexOf(project);
 
+  // Cette fonction ouvre et ferme la modale du projet
   function toggleModal() {
     openModal ? setOpenModal(false) : setOpenModal(true);
   }

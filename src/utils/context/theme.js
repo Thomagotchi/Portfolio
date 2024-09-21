@@ -1,5 +1,7 @@
+// ----- import de fonctions React -----
 import { createContext, useContext } from "react";
 
+// ----- Context des themes de l'application -----
 export const ThemeContext = createContext({
   themeMode: "light",
   darkTheme: () => {},

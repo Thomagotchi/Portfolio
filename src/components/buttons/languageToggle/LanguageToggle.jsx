@@ -1,8 +1,13 @@
-import { useState } from "react";
+// ----- import du SASS -----
 import "./languageToggle.scss";
+// ----- import de fonction React -----
+import { useState } from "react";
+// ----- import de fonction de traduction -----
 import i18next from "i18next";
 
+// ----- Composant 'LanguageToggle' -----
 export function LanguageToggle() {
+  // Ces deux variables vérifie si une langue est déjà active dans le local storage
   const activeLanguage = localStorage.getItem("currentLanguage");
   const [currentLanguage, setCurrentLanguage] = useState(activeLanguage);
 

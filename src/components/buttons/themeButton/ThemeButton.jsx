@@ -1,9 +1,13 @@
-import useTheme from "../../../utils/context/theme";
+// ----- import du SASS -----
 import "./themeButton.scss";
+// ----- import du context 'Theme' -----
+import useTheme from "../../../utils/context/theme";
 
+// ----- Composant 'themeButton' -----
 export function ThemeButton() {
   const { themeMode, lightTheme, darkTheme } = useTheme();
 
+  // Fonction qui toggle le theme du site
   const onChangeBtn = (e) => {
     const darkModeStatus = e.currentTarget.checked;
     if (darkModeStatus) {

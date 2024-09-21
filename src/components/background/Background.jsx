@@ -1,5 +1,7 @@
+// ----- import du SASS -----
 import "./background.scss";
 
+// ----- Composant 'Background' -----
 export function Background() {
   return (
     <>

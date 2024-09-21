@@ -1,14 +1,23 @@
+// ----- import du SASS -----
 import "./contactForm.scss";
+// ----- import de fonction React -----
+import { useState } from "react";
+// ----- import de la librairie react-hook-form -----
 import { useForm } from "react-hook-form";
+// ----- import de fonction de traduction -----
 import { useTranslation } from "react-i18next";
+// ----- import de 'FontAwesome' et des icons -----
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
+// ----- import de l'outil 'emailJS' -----
 import emailjs from "@emailjs/browser";
+// ----- import de 'Toastify' -----
 import { ToastContainer, toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+// ----- import du Captcha Google -----
 import ReCAPTCHA from "react-google-recaptcha";
-import { useState } from "react";
 
+// ----- Composant 'ContactForm' -----
 export function ContactForm() {
   const { t } = useTranslation();
   const [failedCaptchaStyle, setFailedCaptchaStyle] = useState(false);
@@ -22,9 +31,11 @@ export function ContactForm() {
     formState: { errors },
   } = useForm();
 
+  //   // Cette fonction notifie l'utilisateur du succès de l'envoie, et envoie un mail avec leur message
   function sendMail(data) {
+    // Fonction de notification 'Toastify'
     notifySuccess();
-    console.log(data);
+    // Cela envoie un mail avec le message de l'utilisateur
     emailjs
       .send(
         import.meta.env.VITE_MAILER_SECRET,
@@ -49,12 +60,14 @@ export function ContactForm() {
           console.log("FAILED...", error);
         }
       );
+    // Cela reset les saisies de l'utilisateur
     reset();
   }
 
   const notifySuccess = () => {
-    // This removes all toasts from before
+    // Cela supprime les anciennes notifications 'Toastify'
     toast.dismiss();
+    // Renvoie la notification 'Toastify' de succès
     toast.success(t("formSuccessMessage"), {
       icon: () => <FontAwesomeIcon icon={faCheck} />,
       position: "bottom-right",
