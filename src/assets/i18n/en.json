@@ -18,6 +18,7 @@
   "formEmailLabel": "E-Mail",
   "formObjectLabel": "Subject",
   "formMessageLabel": "Message",
-  "formErrorMessage": "Please fill out all fields",
-  "formSuccessMessage": "Message sent"
+  "formSuccessMessage": "Message sent",
+  "errorPageMessage": "Oops! This page doesn't exist.",
+  "errorPageLinkMessage": "Go to homepage"
 }

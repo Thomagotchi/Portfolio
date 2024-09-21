@@ -1,0 +1,75 @@
+@use "../../styles/variables.scss" as *;
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+    margin: calc(50vh - 350px) auto 0 auto;
+    padding: 0 20px;
+    gap: 20px;
+
+    h1 {
+        font-size: 288px;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 32px;
+        margin: 0;
+    }
+
+    p {
+        border-bottom: 1px solid;
+        font-weight: 500;
+        transition: 0.2s ease-in-out;
+    }
+}
+
+.light .error-container {
+    p:hover {
+        color: $background-color-2-light;
+    }
+}
+
+.dark .error-container {
+    p:hover {
+        color: $background-color-2-dark;
+    }
+}
+
+@media (max-width: 940px) {
+    .error-container {
+        gap: 14px;
+    
+        h1 {
+            font-size: 180px;
+        }
+    
+        h2 {
+            font-size: 22px;
+        }
+    
+        p {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .error-container {
+        gap: 14px;
+    
+        h1 {
+            font-size: 120px;
+        }
+    
+        h2 {
+            font-size: 16px;
+        }
+    
+        p {
+            font-size: 14px;
+        }
+    }
+}
