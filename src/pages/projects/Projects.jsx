@@ -1,7 +1,11 @@
-import * as allProjects from "../../assets/data/projects.json";
-import Card from "../../components/card/Card";
+// ----- import du SASS -----
 import "./projects.scss";
+// ----- import du composant 'Card' -----
+import Card from "../../components/card/Card";
+//----- Import de données -----
+import * as allProjects from "../../assets/data/projects.json";
 
+// ----- Page 'Projects' -----
 export function Projects() {
   return (
     <div className="projects-container">
