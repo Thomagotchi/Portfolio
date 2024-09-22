@@ -1,3 +1,4 @@
+// ----- import du SASS -----
 import "./error.scss";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";

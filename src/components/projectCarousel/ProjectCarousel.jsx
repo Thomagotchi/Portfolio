@@ -1,22 +1,22 @@
+// ----- import du SASS -----
+import "./projectCarousel.scss";
 //--- Import de fonction React ---
 import { useState } from "react";
+// ----- import de 'FontAwesome' et des icons -----
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
-import "./projectCarousel.scss";
 
-//--- Fonction qui retourne le composant Carousel  ---
+// ----- Composant 'ProjectCarousel' -----
 const ProjectCarousel = ({ project }) => {
   // Index pour l'image précédente
   const [prevImageIndex, setPrevImageIndex] = useState(
     project.pictures.length - 1
   );
-
   // Index pour l'image actuelle
   const [imageIndex, setImageIndex] = useState(0);
-
   // Index pour l'image suivante
   const [nextImageIndex, setNextImageIndex] = useState(1);
 
@@ -53,7 +53,6 @@ const ProjectCarousel = ({ project }) => {
       ? setNextImageIndex(project.pictures.length - 1)
       : setNextImageIndex(nextImageIndex - 1);
   };
-
   const NextImage = () => {
     prevImageIndex === project.pictures.length - 1
       ? setPrevImageIndex(0)
@@ -68,6 +67,7 @@ const ProjectCarousel = ({ project }) => {
       : setNextImageIndex(nextImageIndex + 1);
   };
 
+  // Cette fonction permet l'utilisateur de sauter d'image en appuyant sur le compteur
   const jumpImage = (index) => {
     setImageIndex(index);
 
@@ -80,10 +80,9 @@ const ProjectCarousel = ({ project }) => {
       : setNextImageIndex(index + 1);
   };
 
-  // Retour des elements HTML
   return (
     <div className="carousel-container">
-      {/* Renvoie toutes les images du logement */}
+      {/* Renvoie toutes les images du projet */}
       {project.pictures.map((image) => {
         return (
           <img
@@ -99,7 +98,7 @@ const ProjectCarousel = ({ project }) => {
         );
       })}
 
-      {/* Si le logement as plusieurs images, cela affiche les flèches et compteur */}
+      {/* Si le projet as plusieurs images, cela affiche les flèches et compteur */}
       {project.pictures.length > 1 && (
         <div className="carousel-elements">
           {/* Flèche gauche */}

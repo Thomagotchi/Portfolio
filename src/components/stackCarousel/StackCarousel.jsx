@@ -1,6 +1,9 @@
-import { useTranslation } from "react-i18next";
+// ----- import du SASS -----
 import "./stackCarousel.scss";
+// ----- import de fonction de traduction -----
+import { useTranslation } from "react-i18next";
 
+// ----- Composant 'StacKCarousel' -----
 export function StackCarousel() {
   const { t } = useTranslation();
 

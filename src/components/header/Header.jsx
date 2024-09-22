@@ -1,22 +1,27 @@
-//--- Import de fonctions ---
+// ----- import du SASS -----
+import "./header.scss";
+import "../../styles/styles.scss";
+//--- Import de fonctions React ---
+import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
+// ----- import de la librairie 'FontAwesome' et des symbols -----
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+// ----- import de fonction de traduction -----
 import { useTranslation } from "react-i18next";
+// ----- import des composants 'ThemeButton' et 'LanguageToggle' -----
 import { LanguageToggle } from "../buttons/languageToggle/LanguageToggle";
 import { ThemeButton } from "../buttons/themeButton/ThemeButton";
-//--- Import de styles ---
-import "./header.scss";
-import "../../styles/styles.scss";
-//--- Import de données ---
+//----- Import de données -----
 import * as informationsContact from "../../assets/data/informations.json";
-import { useState } from "react";
 
+// ----- Composant 'Header' -----
 export function Header() {
   const [isHamburgerActive, setIsHamburgerActive] = useState(false);
   const { t } = useTranslation();
 
+  // Cette fonction toggle l'ouverture du menu en responsive
   function toggleHamburger() {
     setIsHamburgerActive(!isHamburgerActive);
   }

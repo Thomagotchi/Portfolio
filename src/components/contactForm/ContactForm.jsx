@@ -99,6 +99,7 @@ export function ContactForm() {
     }
   };
 
+  // Cela renvoie le formulaire de contact et les composants 'Captcha' et 'Toastify'
   return (
     <div className="form-content">
       <h1 className="form-title">{t("formTitle")}</h1>
@@ -106,21 +107,25 @@ export function ContactForm() {
         <label htmlFor="name">{t("formNameLabel")} *</label>
         <input
           {...register("name", { required: true })}
+          aria-label="name input"
           className={errors.name ? "form-input is-invalid" : "form-input"}
         />
         <label htmlFor="email">{t("formEmailLabel")} *</label>
         <input
           {...register("email", { required: true, pattern: /\S+@\S+\.\S+/ })}
+          aria-label="email input"
           className={errors.email ? "form-input is-invalid" : "form-input"}
         />
         <label htmlFor="object">{t("formObjectLabel")} *</label>
         <input
           {...register("object", { required: true })}
+          aria-label="objet input"
           className={errors.object ? "form-input is-invalid" : "form-input"}
         />
         <label htmlFor="message">{t("formMessageLabel")} *</label>
         <textarea
           {...register("message", { required: true })}
+          aria-label="message input"
           className={
             errors.message
               ? "form-input form-message-input is-invalid"

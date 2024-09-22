@@ -1,9 +1,14 @@
-import { useTranslation } from "react-i18next";
-import PrimaryButton from "../../components/buttons/primaryButton/PrimaryButton";
-import * as informationsContact from "../../assets/data/informations.json";
+// ----- import du SASS -----
 import "./about.scss";
+// ----- import de fonction de traduction -----
+import { useTranslation } from "react-i18next";
+// ----- import des composants 'PrimaryButton' et 'StackCarousel' -----
+import PrimaryButton from "../../components/buttons/primaryButton/PrimaryButton";
 import { StackCarousel } from "../../components/stackCarousel/StackCarousel";
+//----- Import de données -----
+import * as informationsContact from "../../assets/data/informations.json";
 
+// ----- Page 'About' -----
 export function About() {
   const { t } = useTranslation();
 
