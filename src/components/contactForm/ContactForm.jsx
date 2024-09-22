@@ -31,7 +31,7 @@ export function ContactForm() {
     formState: { errors },
   } = useForm();
 
-  //   // Cette fonction notifie l'utilisateur du succès de l'envoie, et envoie un mail avec leur message
+  // Cette fonction notifie l'utilisateur du succès de l'envoie, et envoie un mail avec leur message
   function sendMail(data) {
     // Fonction de notification 'Toastify'
     notifySuccess();
@@ -64,6 +64,7 @@ export function ContactForm() {
     reset();
   }
 
+  // Cette fonction se charge de la partie notification
   const notifySuccess = () => {
     // Cela supprime les anciennes notifications 'Toastify'
     toast.dismiss();
@@ -74,6 +75,7 @@ export function ContactForm() {
     });
   };
 
+  // Cette fonction vérifie si il y as une erreur avec les saisies du formulaire
   const checkErrors = (errors) => {
     if (hasCompleteCaptcha) {
       setFailedCaptchaStyle(false);
